@@ -1,0 +1,12 @@
+conan
+hunspell-sk
+nerd-fonts-fira-code
+pa-applet-git
+samsung-unified-driver-printer
+slack-desktop
+teams
+timeshift-bin
+tlpui
+visual-studio-code-bin
+yay-bin
+zoom

@@ -1,0 +1,50 @@
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+*background:                 #2E3436
+*foreground:                 #D3D7Cf
+*fading:                     8
+*fadeColor:                  black
+*cursorColor:                #34E2E2
+*pointerColorBackground:     #2B2B2B
+*pointerColorForeground:     #06989A
+
+!! black dark/light
+*color0:                     #2E3436
+*color8:                     #555753
+
+!! red dark/light
+*color1:                     #CC0000
+*color9:                     #EF2929
+
+!! green dark/light
+*color2:                     #4E9A06
+*color10:                    #8AE234
+
+!! yellow dark/light
+*color3:                     #C4A000
+*color11:                    #FCE94F
+
+!! blue dark/light
+*color4:                     #3465A4
+*color12:                    #729FCF
+
+!! magenta dark/light
+*color5:                     #75507B
+*color13:                    #AD7fA8
+
+!! cyan dark/light
+*color6:                     #06989A
+*color14:                    #34E2E2
+
+!! white dark/light
+*color7:                     #D3D7Cf
+*color15:                    #EEEEEC
+
+Xcursor.theme: xcursor-breeze
+Xcursor.size:  0

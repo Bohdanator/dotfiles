@@ -1,0 +1,16 @@
+configuration {
+    modi: "drun,window";
+
+    font: "Fira Code Nerd Font 15";
+    show-icons: true;
+    /* drun-show-actions: true; */
+    scroll-method: 1;
+
+    /*               bg       fg      bgalt    hlbg      hlfg   */
+    color-normal: "#303030, #F0F0F0, #353535, #3465A4, #F0F0F0";
+    color-urgent: "#FFFF00, #FF0000, #FFFF00, #FFFF00, #FF0000";
+    color-active: "#729FCF, #000000, #F5F5F5, #3465A4, #000000";
+
+    /*               bg     border     sep                      */
+    color-window: "#303030, #3465A4, #3465A4";
+}

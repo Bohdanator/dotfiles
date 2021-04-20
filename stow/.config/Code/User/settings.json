@@ -1,0 +1,152 @@
+{
+    // TELEMETRY
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    // EDITING
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.emptySelectionClipboard": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "window.menuBarVisibility": "toggle",
+    // "window.titleBarStyle": "custom",
+
+    // EDITOR APPEARANCE
+    "editor.scrollBeyondLastLine": false,
+    "editor.wordWrap": "on",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.fontFamily": "'Fira Code', 'Noto Mono', Consolas, monospace",
+    "editor.fontLigatures": true,
+    "disableLigatures.mode": "Cursor",
+    "editor.renderWhitespace": "all",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": true,
+    "editor.rulers": [100],
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.decorations.colors": true,
+
+    // TERMINAL APPEARANCE
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.enableBell": true,
+    "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Fira Code', 'Noto Mono', Consolas, monospace",
+    "workbench.colorCustomizations": {
+        "terminal.ansiBlack":   "#2E3436",  "terminal.ansiBrightBlack":   "#555753",
+        "terminal.ansiRed":     "#CC0000",  "terminal.ansiBrightRed":     "#EF2929",
+        "terminal.ansiGreen":   "#4E9A06",  "terminal.ansiBrightGreen":   "#8AE234",
+        "terminal.ansiYellow":  "#C4A000",  "terminal.ansiBrightYellow":  "#FCE94F",
+        "terminal.ansiBlue":    "#3465A4",  "terminal.ansiBrightBlue":    "#729FCF",
+        "terminal.ansiMagenta": "#75507B",  "terminal.ansiBrightMagenta": "#AD7fA8",
+        "terminal.ansiCyan":    "#06989A",  "terminal.ansiBrightCyan":    "#34E2E2",
+        "terminal.ansiWhite":   "#D3D7Cf",  "terminal.ansiBrightWhite":   "#EEEEEC",
+    },
+
+    // EXPLORER APPEARANCE
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.indent": 16,
+    "explorer.autoReveal": false,
+    "explorer.compactFolders": false,
+    "explorer.openEditors.visible": 0,
+
+    // CODE RUNNER
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.ignoreSelection": true,
+    "code-runner.enableAppInsights": false,
+
+    // SPELLRIGHT
+    "spellright.configurationScope": "user",
+    "spellright.notificationClass": "information",
+    "spellright.language": [
+        "sk_SK"
+    ],
+    "spellright.documentTypes": [],
+
+    // GIT
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "gitlens.codeLens.scopes": ["document"],
+    "gitlens.menus": { "editorGroup": false },
+    "gitlab.showPipelineUpdateNotifications": true,
+    "gitlab.showStatusBarLinks": false,
+    "git-graph.showStatusBarItem": false,
+
+    // LATEX
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+
+    // LIVESHARE
+    "liveshare.connectionMode": "relay",
+    "liveshare.featureSet": "stable",
+    "liveshare.showInStatusBar": "whileCollaborating",
+
+    // PYTHON
+    "python.terminal.executeInFileDir": true,
+    // "python.linting.pylintEnabled": false,
+    // "python.linting.flake8Enabled": true,
+
+    // NOTEBOOKS
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+
+    // JAVA
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "java.semanticHighlighting.enabled": true,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/usr/lib/jvm/java-11-openjdk/lib/fx/*.jar",
+        "C:\\Program Files\\Java\\javafx-sdk-11.0.2\\lib\\*.jar",
+    ],
+
+    // C++
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.includePath": [
+        "/usr/include/lpsolve/"
+    ],
+
+    // JS
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+
+    // TASKS
+    "task.problemMatchers.neverPrompt": {
+        "shell": true
+    },
+
+    // LINE COUNTER
+    "LineCount.excludes": [
+        "**/.vscode/**", "**/dist/**", "**/node_modules/**", "**/migrations/**",
+        "**/*.lock", "**/*.csv", "**/*.svg",
+        "**/tests/**",
+    ],
+    "LineCount.showStatusBarItem": false,
+    "LineCount.output": { "txt": true, "json": false, "csv": false, "md": false, "outdir": "." },
+
+    // ERROR LENS
+    "errorLens.addNumberOfDiagnostics": true,
+    "errorLens.delay": 5000,
+    "errorLens.fontStyleItalic": true,
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning"
+    ],
+
+    // OTHER
+    "extensions.ignoreRecommendations": false,
+
+}
