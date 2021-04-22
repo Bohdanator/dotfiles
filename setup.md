@@ -73,7 +73,7 @@ a working dual-boot system.
       but we need to clone the directory structure first
       1. `rsync -a --include '*/' --exclude '*' stow/ ~`
       1. `stow stow`
-   1. `sudo usermod -aG docker $USER`
+   1. `sudo usermod -aG docker,wireshark $USER`
    1. `sudo systemctl enable cronie cups docker fstrim.timer lightdm tlp ufw`
    1. `sudo ufw enable`
    1. `chsh -s /bin/zsh`

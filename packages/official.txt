@@ -68,7 +68,7 @@ hicolor-icon-theme
 hplip
 htop
 hunspell
-hunspell-en_US
+hunspell-en_us
 hwinfo
 i3-gaps
 i3lock
@@ -224,6 +224,7 @@ vulkan-intel
 vulkan-radeon
 vulkan-tools
 wget
+wireshark-qt
 wmctrl
 xdg-user-dirs
 xdg-utils
