@@ -15,7 +15,7 @@ gitprune() {
 
 # OTHER UTILS
 alias mdtopdf="pandoc --highlight-style kate -V papersize:a4 -V geometry:margin=2.5cm -V urlcolor=blue -f gfm"
-alias busy="python -c "while True: pass""
+alias busy="python -c 'while True: pass'"
 alias timer='termdown -f roman'
 alias ookla='speedtest --simple'
 

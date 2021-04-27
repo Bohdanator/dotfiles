@@ -142,6 +142,7 @@ peek
 pgpdump
 picom
 pkgfile
+pkgstats
 polkit-gnome
 potrace
 powertop
@@ -195,6 +196,7 @@ termdown
 terminus-font
 texlive-most
 time
+tk
 tldr
 tlp
 tmux
