@@ -80,7 +80,6 @@ intel-media-driver
 ipython
 java11-openjfx
 jdk11-openjdk
-joe
 jpegoptim
 jq
 jupyter
