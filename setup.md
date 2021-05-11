@@ -100,6 +100,7 @@ issue.
 1. go through app settings
    - especially don't forget to tweak settings of the XFCE Power Manager
 1. `cat packages/vscode.txt | xargs -otn 1 code --install-extension`
+1. `ln -s /usr/share/hunspell/* ~/.config/Code/Dictionaries`
 1. run `ssh-keygen` and `ssh-copy-id` the public key to all relevant SSH servers
 1. visit `http://localhost:631` and install your printers
    - you may need to enter the printer's URL manually, eg. it's `lpd://192.168.1.1/LPRServer` or
