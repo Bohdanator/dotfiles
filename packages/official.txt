@@ -171,6 +171,7 @@ python-virtualenv
 python2
 qt5ct
 ranger
+reflector
 rofi
 rsync
 sbxkb

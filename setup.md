@@ -74,12 +74,11 @@ a working dual-boot system.
       1. `rsync -a --include '*/' --exclude '*' stow/ ~`
       1. `stow stow`
    1. `sudo usermod -aG docker,wireshark $USER`
-   1. `sudo systemctl enable cronie cups docker fstrim.timer lightdm tlp ufw`
+   1. `sudo systemctl enable cronie cups docker fstrim.timer lightdm reflector.timer tlp ufw`
    1. `sudo ufw enable`
    1. `chsh -s /bin/zsh`
-   1. set `greeter-setup-script=/usr/bin/numlockx on` in `/etc/lightdm/lightdm.conf`
-   1. `cat templates/etc/lightdm/lightdm-gtk-greeter.conf | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf`
-   1. copy files in the `templates` directory to `~` and edit them appropriately
+   1. review/edit each file in the `templates` directory and copy it where it belongs (use `diff`
+      to compare it with the system-provided file if it's present)
 1. reboot
 
 Note: If you encounter black screen with no tty instead of LightDM startup on a system with Intel
