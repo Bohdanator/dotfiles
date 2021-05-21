@@ -95,6 +95,7 @@ libreoffice-still
 libsecret
 libva-intel-driver
 libva-mesa-driver
+libva-utils
 libva-vdpau-driver
 libvdpau-va-gl
 lightdm
@@ -200,6 +201,7 @@ tk
 tldr
 tlp
 tmux
+tokei
 tree
 ttf-bitstream-vera
 ttf-dejavu
