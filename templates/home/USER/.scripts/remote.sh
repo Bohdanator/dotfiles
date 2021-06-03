@@ -7,7 +7,7 @@ export UNIXHOST="$REMOTEUSER@unix.dcs.fmph.uniba.sk"
 
 alias fmfissh="ssh $DAVINCIHOST"
 fmfisync() {
-    local laptop="$HOME/Documents/fmfi/"
+    local laptop="$HOME/Documents/fmfi/public_html/"
     local davinci="$DAVINCIHOST:public_html/"
     if [[ $1 == "lr" ]] ; then
         rsync -rPh --delete $laptop $davinci
