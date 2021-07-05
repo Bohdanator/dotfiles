@@ -225,6 +225,7 @@ urlwatch
 usbutils
 valgrind
 vdpauinfo
+veracrypt
 vi
 vim
 vlc
