@@ -76,6 +76,7 @@ a working dual-boot system.
    1. `sudo usermod -aG docker,wireshark $USER`
    1. `sudo systemctl enable cronie cups docker fstrim.timer lightdm tlp ufw`
    1. `sudo ufw enable`
+   1. `sudo paperconfig -p a4`
    1. `chsh -s /bin/zsh`
    1. review/edit each file in the `templates` directory and copy it where it belongs (use `diff`
       to compare it with the system-provided file if it's present)
