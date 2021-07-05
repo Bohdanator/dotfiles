@@ -160,6 +160,7 @@ pyenv
 python
 python-beautifulsoup4
 python-matplotlib
+python-networkx
 python-numpy
 python-pandas
 python-pillow
@@ -177,6 +178,7 @@ ranger
 reflector
 rofi
 rsync
+sagemath
 sbxkb
 screen
 screenfetch
