@@ -69,7 +69,7 @@ bindsym Ctrl+Print           exec --no-startup-id flameshot gui
 bindsym $mod+Return          exec lxterminal
 bindsym $mod+BackSpace       exec lxterminal -e ipython
 bindsym $mod+x               exec firefox
-bindsym $mod+d               exec dolphin
+bindsym $mod+d               exec thunar
 bindsym $mod+c               exec code
 bindsym $mod+Ctrl+m          exec pavucontrol
 bindsym $mod+Ctrl+x          --release exec --no-startup-id xkill

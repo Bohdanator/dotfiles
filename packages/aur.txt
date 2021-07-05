@@ -8,5 +8,6 @@ teams
 timeshift-bin
 tlpui
 visual-studio-code-bin
+xcursor-breeze
 yay-bin
 zoom

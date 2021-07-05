@@ -8,7 +8,7 @@ My Linux configuration files. Features:
 - Bar: **i3status**
 - Menu: **Rofi**
 - Notifications: **Dunst**
-- File manager: **Dolphin**
+- File manager: **Thunar**
 - Terminal emulator: **LXTerminal**
 - Color palette: **Tango**
 - Qt and GTK theme: **Arc Dark**
