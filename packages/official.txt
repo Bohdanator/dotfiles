@@ -117,6 +117,7 @@ mesa-demos
 mesa-vdpau
 mousepad
 mypy
+ncdu
 neofetch
 net-tools
 network-manager-applet
