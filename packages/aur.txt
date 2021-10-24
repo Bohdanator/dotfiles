@@ -5,6 +5,7 @@ pa-applet-git
 samsung-unified-driver-printer
 slack-desktop
 teams
+texlive-latexindent-meta
 timeshift-bin
 tlpui
 visual-studio-code-bin
