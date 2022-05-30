@@ -4,16 +4,7 @@ export SCRIPTSDIR="$HOME/.scripts"
 alias bat="$SCRIPTSDIR/battery.sh"
 [[ -r "$SCRIPTSDIR/remote.sh" ]] && source "$SCRIPTSDIR/remote.sh"
 
-# GIT UTILS
-alias gitu="git add . && git commit && git push"
-
-gitprune() {
-    git checkout master
-    git pull -p
-    git branch -vv | grep ": gone]" | awk "{print $1}" | xargs git branch -D
-}
-
-# OTHER UTILS
+# UTILS
 alias mdtopdf="pandoc --highlight-style kate -V papersize:a4 -V geometry:margin=2.5cm -V urlcolor=blue -f gfm"
 alias busy="python -c 'while True: pass'"
 alias timer='termdown -f roman'
@@ -51,3 +42,100 @@ alias la="ls -ghlA --time-style=long-iso"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
+alias df="df -h"
+alias du="du -h"
+alias free="free -h"
+
+# GIT SHORTCUTS
+alias g='git'
+
+alias gad='git add -v'
+alias gadp='git add -v --patch'
+alias gadi='git add -v --interactive'
+
+alias gap='git apply'
+
+alias gbr='git branch'
+alias gbra='git branch --all'
+alias gbrd='git branch --delete'
+
+alias gco='git checkout --recurse-submodules'
+alias gcom='git checkout main || git checkout master'
+alias gcod='git checkout develop'
+alias gcob='git checkout -b'
+
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
+
+alias gcl='git clone --recurse-submodules'
+
+alias gcm='git commit -v'
+alias gcma='git commit -v --amend'
+alias gcmf='git commit -v --fixup'
+
+alias gcf='git config'
+alias gcfl='git config --list'
+
+alias gdf='git diff'
+alias gdfs='git diff --staged'
+alias gdfn='git diff --stat'
+
+alias gft='git fetch'
+alias gfta='git fetch --all'
+
+alias glg='git log'
+alias glgs='git log --stat'
+alias glgg='git log --graph'
+alias glgo='git log --oneline'
+alias glggo='git log --graph --oneline'
+alias glggp="git log --graph --pretty='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+
+alias gpl='git pull'
+
+alias gps='git push'
+alias gpst='git push origin --tags'
+
+alias grb='git rebase'
+alias grbi='git rebase -i'
+alias grbio='git rebase -i --onto'
+alias grbis='git rebase -i --autosquash'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+
+alias gww='git remote -v'
+alias gwwa='git remote -v add'
+alias gwws='git remote -v set-url'
+
+alias grr='git reset'
+alias grrh='git reset --hard'
+alias grru='git reset --soft HEAD~'
+
+alias gll='git restore'
+alias glls='git restore --staged'
+
+alias grv='git revert'
+
+alias gxx='git rm'
+alias gxxc='git rm --cached'
+
+alias gsh='git show'
+
+alias gss='git stash'
+alias gssp='git stash push --include-untracked'
+alias gssps='git stash push --staged'
+alias gssl='git stash list'
+alias gsss='git stash show'
+alias gssst='git stash show --text'
+alias gssa='git stash apply'
+alias gstd='git stash drop'
+alias gsto='git stash pop'
+
+alias goo='git status'
+
+alias gsm='git submodule'
+alias gsmu='git submodule update'
+
+alias gsw='git switch'
+
+alias gitfixsubmodules='git submodule deinit -f . && git submodule update --init'
