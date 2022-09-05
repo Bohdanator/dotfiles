@@ -1,4 +1,5 @@
 conan
+gdmap
 hunspell-sk
 nerd-fonts-fira-code
 pa-applet-git
