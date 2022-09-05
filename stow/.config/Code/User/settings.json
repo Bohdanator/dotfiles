@@ -1,16 +1,20 @@
 {
-    // TELEMETRY
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    // GENERAL
+    "telemetry.telemetryLevel": "off",
+    "workbench.colorTheme": "Default Dark+",
+    "window.menuBarVisibility": "toggle",
+    // "window.titleBarStyle": "custom",
+    "extensions.ignoreRecommendations": false,
+    "terminal.integrated.allowChords": false,  // pass e.g. Ctrl+K to the terminal
+    "terminal.integrated.scrollback": 10000,
 
     // EDITING
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.emptySelectionClipboard": false,
     "editor.acceptSuggestionOnEnter": "off",
-    "window.menuBarVisibility": "toggle",
-    // "window.titleBarStyle": "custom",
 
     // EDITOR APPEARANCE
     "editor.scrollBeyondLastLine": false,
@@ -28,6 +32,7 @@
     "editor.rulers": [100],
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.colors": true,
+    "workbench.editor.untitled.hint": "hidden",
 
     // TERMINAL APPEARANCE
     "terminal.integrated.cursorStyle": "block",
@@ -61,13 +66,15 @@
     "code-runner.ignoreSelection": true,
     "code-runner.enableAppInsights": false,
 
-    // SPELLRIGHT
+    // SPELLING
     "spellright.configurationScope": "user",
     "spellright.notificationClass": "information",
     "spellright.language": [
         "sk_SK"
     ],
     "spellright.documentTypes": [],
+    // "grammarly.domain": "academic",
+    "grammarly.hideUnavailablePremiumAlerts": true,
 
     // GIT
     "git.confirmSync": false,
@@ -76,7 +83,6 @@
     "gitlens.menus": { "editorGroup": false },
     "gitlab.showPipelineUpdateNotifications": true,
     "gitlab.showStatusBarLinks": false,
-    "git-graph.showStatusBarItem": false,
 
     // LATEX
     "latex-workshop.view.pdf.viewer": "tab",
@@ -89,16 +95,16 @@
 
     // PYTHON
     "python.terminal.executeInFileDir": true,
-    // "python.linting.pylintEnabled": false,
+    // "python.linting.enabled": true,
+    // "python.linting.pylintEnabled": true,
     // "python.linting.flake8Enabled": true,
+    // "python.linting.mypyEnabled": true,
+    "python.formatting.provider": "black",
 
     // NOTEBOOKS
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
 
     // JAVA
     "java.configuration.checkProjectSettingsExclusions": false,
@@ -127,6 +133,7 @@
     "task.problemMatchers.neverPrompt": {
         "shell": true
     },
+    "taskExplorer.pathToMake": "make",
 
     // LINE COUNTER
     "LineCount.excludes": [
@@ -138,16 +145,26 @@
     "LineCount.output": { "txt": true, "json": false, "csv": false, "md": false, "outdir": "." },
 
     // ERROR LENS
-    "errorLens.addNumberOfDiagnostics": true,
+    "errorLens.messageTemplate": "($count) $message",
     "errorLens.delay": 5000,
     "errorLens.fontStyleItalic": true,
     "errorLens.enabledDiagnosticLevels": [
         "error",
-        "warning"
+        "warning",
     ],
+    "errorLens.enabled": false,
 
     // OTHER
-    "extensions.ignoreRecommendations": false,
-    "workbench.editor.untitled.hint": "hidden",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "projectManager.git.baseFolders": [
+        "~/Documents",
+        "~/dotfiles"
+    ],
+    "projectManager.git.maxDepthRecursion": 1,
+    "terminal.integrated.minimumContrastRatio": 1,
+
+    "latex-workshop.view.pdf.color.dark.backgroundColor": "#1e1e1e",
+    "editor.inlineSuggest.enabled": true,
+
 
 }
