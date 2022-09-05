@@ -180,6 +180,7 @@ reflector
 ristretto
 rofi
 rsync
+rustup
 sagemath
 sbxkb
 screen

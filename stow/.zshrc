@@ -122,9 +122,11 @@ esac
 ################################################################################
 
 . /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-[[ -r ~/.scripts/source.sh ]] && . ~/.scripts/source.sh
+[[ -r ~/.scripts/source.sh ]] && source ~/.scripts/source.sh
+
+[[ -r /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
 eval "$(pyenv init -)"
 
@@ -134,13 +136,3 @@ fi
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
-
-# from ubuntu .zshrc
-
-# . "$HOME/.cargo/env"
-
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# if [ -e /home/david/.nix-profile/etc/profile.d/nix.sh ]; then . /home/david/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

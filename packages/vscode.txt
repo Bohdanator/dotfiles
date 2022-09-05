@@ -40,6 +40,7 @@ PKief.material-icon-theme
 redhat.java
 redhat.vscode-yaml
 ritwickdey.LiveServer
+rust-lang.rust-analyzer
 silvenon.mdx
 spmeesseman.vscode-taskexplorer
 stkb.rewrap

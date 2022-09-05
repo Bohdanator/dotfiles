@@ -2,6 +2,7 @@ conan
 gdmap
 hunspell-sk
 nerd-fonts-fira-code
+nvm
 pa-applet-git
 samsung-unified-driver-printer
 slack-desktop
