@@ -110,7 +110,9 @@
 
   # MY OVERRIDES {
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-    time dir vcs background_jobs command_execution_time newline prompt_char
+    time dir vcs background_jobs command_execution_time
+    pyenv virtualenv nvm nix_shell
+    newline prompt_char
   )
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
   # }
