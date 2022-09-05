@@ -61,7 +61,7 @@ alias gbrd='git branch --delete'
 
 alias gco='git checkout --recurse-submodules'
 alias gcom='git checkout main || git checkout master'
-alias gcod='git checkout develop'
+alias gcod='git checkout develop || git checkout dev'
 alias gcob='git checkout -b'
 
 alias gcp='git cherry-pick'
@@ -139,3 +139,4 @@ alias gsmu='git submodule update'
 alias gsw='git switch'
 
 alias gitfixsubmodules='git submodule deinit -f . && git submodule update --init'
+alias gitpullmain='gcod && gpl && gco - && gcom && gpl && gco -'
