@@ -15,10 +15,10 @@ smart_borders                 on
 floating_modifier             $mod
 focus_follows_mouse           no
 workspace_auto_back_and_forth yes
-for_window [urgent=latest]    focus
 for_window [class=".*"]       title_format  "%title (%class)"
 
 font pango:Noto Sans 10
+
 # class                 border  bground text    indicator child_border
 client.focused          #729FCF #3465A4 #FFFFFF #34E2E2   #3465A4
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
@@ -66,13 +66,19 @@ bindsym Print                exec --no-startup-id \
 bindsym Ctrl+Print           exec --no-startup-id flameshot gui
 
 # app shortcuts
-bindsym $mod+Return          exec lxterminal
-bindsym $mod+BackSpace       exec lxterminal -e ipython
+bindsym $mod+Return          exec --no-startup-id lxterminal
+bindsym $mod+Shift+Return    exec --no-startup-id lxterminal -e htop
+bindsym $mod+Shift+BackSpace exec --no-startup-id lxterminal -e ipython
 bindsym $mod+x               exec firefox
 bindsym $mod+d               exec thunar
 bindsym $mod+c               exec code
 bindsym $mod+Ctrl+m          exec pavucontrol
 bindsym $mod+Ctrl+x          --release exec --no-startup-id xkill
+
+bindsym $mod+BackSpace       exec --no-startup-id telegram-desktop, \
+                             exec --no-startup-id slack, \
+                             exec --no-startup-id lxterminal -e ipython, \
+                             exec --no-startup-id lxterminal -e htop
 
 #################################### MODES #####################################
 
@@ -132,8 +138,46 @@ mode "$mode_display" {
     bindsym Escape           mode "default"
 }
 
-############################## WINDOW NAVIGATION ###############################
+########################## WORKSPACES AND SCRATCHPADS ##########################
 
+set $ws0 "0:'   "
+set $ws1 "1:1  "
+set $ws2 "2:2  "
+set $ws3 "3:3  "
+set $ws4 "4:4 ﬏ "
+set $ws5 "5:5 ﬏ "
+set $ws6 "6:6 ﬏ "
+set $ws7 "7:7 ﬏ "
+set $ws8 "8:8 ﬏ "
+set $ws9 "9:9   "
+set $wsA "10:0  "
+set $wsB "11:- 切 "
+set $wsC "12:=  "
+
+# $ws0 at the end, so that $ws1 is used at startup
+workspace $ws1 output eDP1
+workspace $ws2 output eDP1
+workspace $ws3 output eDP1
+workspace $ws4 output HDMI1
+workspace $ws5 output HDMI1
+workspace $ws6 output HDMI1
+workspace $ws7 output HDMI1
+workspace $ws8 output HDMI1
+workspace $ws9 output eDP1
+workspace $wsA output eDP1
+workspace $wsB output eDP1
+workspace $wsC output eDP1
+workspace $ws0 output eDP1
+
+set $sp0 "scratch0"
+set $sp1 "scratch1"
+set $sp2 "scratch2"
+set $sp3 "scratch3"
+set $sp4 "scratch4"
+
+################################## NAVIGATION ##################################
+
+# focus a window/container
 bindsym $mod+a               focus parent
 
 bindsym $mod+j               focus left
@@ -146,6 +190,7 @@ bindsym $mod+Down            focus down
 bindsym $mod+Up              focus up
 bindsym $mod+Right           focus right
 
+# move a window/container
 bindsym $mod+Shift+j         move left
 bindsym $mod+Shift+k         move down
 bindsym $mod+Shift+l         move up
@@ -156,23 +201,7 @@ bindsym $mod+Shift+Down      move down
 bindsym $mod+Shift+Up        move up
 bindsym $mod+Shift+Right     move right
 
-############################# WORKSPACE NAVIGATION #############################
-
-set $ws0 "0:'   "
-set $ws1 "1:1  "
-set $ws2 "2:2 ﬏ "
-set $ws3 "3:3  "
-set $ws4 "4:4   "
-set $ws5 "5:5   "
-set $ws6 "6:6  "
-set $ws7 "7:7 ﬏ "
-set $ws8 "8:8  "
-set $ws9 "9:9   "
-set $wsA "10:0   "
-set $wsB "11:- ﬏ "
-set $wsC "12:= 切 "
-
-# switch to workspace
+# switch to a workspace
 bindsym $mod+grave           workspace $ws0
 bindsym $mod+1               workspace $ws1
 bindsym $mod+2               workspace $ws2
@@ -190,7 +219,7 @@ bindsym $mod+Ctrl+Left       workspace prev
 bindsym $mod+Ctrl+Right      workspace next
 bindsym $mod+b               workspace back_and_forth
 
-# Move focused container to workspace
+# move the focused window/container to a workspace
 bindsym $mod+Ctrl+grave      move container to workspace $ws0
 bindsym $mod+Ctrl+1          move container to workspace $ws1
 bindsym $mod+Ctrl+2          move container to workspace $ws2
@@ -205,7 +234,7 @@ bindsym $mod+Ctrl+0          move container to workspace $wsA
 bindsym $mod+Ctrl+minus      move container to workspace $wsB
 bindsym $mod+Ctrl+equal      move container to workspace $wsC
 
-# Move to workspace with focused container
+# move the focused window/container to a workspace and switch to it
 bindsym $mod+Shift+grave     move container to workspace $ws0;           workspace $ws0
 bindsym $mod+Shift+1         move container to workspace $ws1;           workspace $ws1
 bindsym $mod+Shift+2         move container to workspace $ws2;           workspace $ws2
@@ -221,21 +250,21 @@ bindsym $mod+Shift+minus     move container to workspace $wsB;           workspa
 bindsym $mod+Shift+equal     move container to workspace $wsC;           workspace $wsC
 bindsym $mod+Shift+b         move container to workspace back_and_forth; workspace back_and_forth
 
-# scratchpads
-bindsym $mod+Shift+p            mark      "scratch1", move scratchpad
-bindsym $mod+p                  [con_mark="scratch1"] scratchpad show
-bindsym $mod+Shift+bracketleft  mark      "scratch2", move scratchpad
-bindsym $mod+bracketleft        [con_mark="scratch2"] scratchpad show
-bindsym $mod+Shift+bracketright mark      "scratch3", move scratchpad
-bindsym $mod+bracketright       [con_mark="scratch3"] scratchpad show
-bindsym $mod+Shift+apostrophe   mark      "scratch4", move scratchpad
-bindsym $mod+apostrophe         [con_mark="scratch4"] scratchpad show
-bindsym $mod+Shift+backslash    mark      "scratch5", move scratchpad
-bindsym $mod+backslash          [con_mark="scratch5"] scratchpad show
-bindsym $mod+Shift+slash                              move scratchpad
-bindsym $mod+slash                                    scratchpad show
+# move to a scratchpad / view a scratchpad
+bindsym $mod+Shift+p            mark      $sp0, move scratchpad
+bindsym $mod+p                  [con_mark=$sp0] scratchpad show
+bindsym $mod+Shift+bracketleft  mark      $sp1, move scratchpad
+bindsym $mod+bracketleft        [con_mark=$sp1] scratchpad show
+bindsym $mod+Shift+bracketright mark      $sp2, move scratchpad
+bindsym $mod+bracketright       [con_mark=$sp2] scratchpad show
+bindsym $mod+Shift+apostrophe   mark      $sp3, move scratchpad
+bindsym $mod+apostrophe         [con_mark=$sp3] scratchpad show
+bindsym $mod+Shift+backslash    mark      $sp4, move scratchpad
+bindsym $mod+backslash          [con_mark=$sp4] scratchpad show
+bindsym $mod+Shift+slash                        move scratchpad
+bindsym $mod+slash                              scratchpad show
 
-# monitors
+# move the focused workspace to an output
 bindsym $mod+Ctrl+Up            move workspace to output up
 bindsym $mod+Ctrl+Down          move workspace to output right
 
@@ -289,6 +318,11 @@ for_window [title="Microsoft Teams Notification"] floating enable border normal
 for_window [class="SimpleScreenRecorder"]         floating enable border normal
 for_window [class="matplotlib"]                   floating enable border normal
 for_window [title="AiS2"]                         floating enable border normal
+
+assign     [class="TelegramDesktop"]              $wsB
+assign     [class="Slack"]                        $wsC
+for_window [title="IPython: .*"]                  mark $sp2, move scratchpad
+for_window [title="htop"]                         mark $sp4, move scratchpad
 
 ################################### STARTUP ###################################
 
