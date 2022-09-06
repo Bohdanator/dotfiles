@@ -4,6 +4,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export BROWSER=/usr/bin/firefox
 export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/mousepad
+export GIT_EDITOR=/usr/bin/nano
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
