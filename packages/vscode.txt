@@ -18,11 +18,11 @@ github.copilot
 github.vscode-pull-request-github
 GitLab.gitlab-workflow
 hashicorp.terraform
+haskell.haskell
 humao.rest-client
 jakearl.search-editor-apply-changes
 James-Yu.latex-workshop
 javierartero.equality
-justusadam.language-haskell
 koehlma.markdown-math
 liximomo.sftp
 lyzerk.linecounter

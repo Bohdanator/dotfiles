@@ -65,6 +65,7 @@ gvfs-mtp
 gvfs-nfs
 gvfs-smb
 gxkb
+haskell-language-server
 hicolor-icon-theme
 hplip
 htop
