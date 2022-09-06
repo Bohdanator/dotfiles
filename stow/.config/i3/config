@@ -79,13 +79,13 @@ bindsym $mod+Ctrl+x          --release exec --no-startup-id xkill
 set $mode_system (l)ock, (e)xit, switch (u)ser, (s)uspend, (h)ibernate, (r)eboot, shut(d)own
 bindsym $mod+o mode "$mode_system"
 mode "$mode_system" {
-    bindsym l      exec --no-startup-id $HOME/.scripts/lock.sh,                      mode "default"
-    bindsym e      exec --no-startup-id i3-msg exit,                                 mode "default"
-    bindsym u      exec --no-startup-id dm-tool switch-to-greeter,                   mode "default"
-    bindsym s      exec --no-startup-id $HOME/.scripts/lock.sh && systemctl suspend, mode "default"
-    bindsym h      exec --no-startup-id systemctl hibernate,                         mode "default"
-    bindsym r      exec --no-startup-id systemctl reboot,                            mode "default"
-    bindsym d      exec --no-startup-id systemctl poweroff,                          mode "default"
+    bindsym l      exec --no-startup-id dm-tool lock,                      mode "default"
+    bindsym e      exec --no-startup-id i3-msg exit,                       mode "default"
+    bindsym u      exec --no-startup-id dm-tool switch-to-greeter,         mode "default"
+    bindsym s      exec --no-startup-id dm-tool lock && systemctl suspend, mode "default"
+    bindsym h      exec --no-startup-id systemctl hibernate,               mode "default"
+    bindsym r      exec --no-startup-id systemctl reboot,                  mode "default"
+    bindsym d      exec --no-startup-id systemctl poweroff,                mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
