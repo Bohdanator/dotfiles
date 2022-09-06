@@ -1,3 +1,3 @@
 #!/bin/bash
 
-i3lock -c 101030
+dm-tool lock
