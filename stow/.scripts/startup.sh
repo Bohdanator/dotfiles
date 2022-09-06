@@ -8,7 +8,7 @@ xinput --set-prop "$touchpad_id" "$tapping_code" 1
 
 xset m 20/10 10 r rate 180 20 b off
 
-sbxkb &
+gxkb &
 setxkbmap -layout 'us,sk(qwerty)'
 setxkbmap -option 'grp:win_space_toggle'
 

@@ -64,6 +64,7 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
 gvfs-smb
+gxkb
 hicolor-icon-theme
 hplip
 htop
@@ -181,7 +182,6 @@ rofi
 rsync
 rustup
 sagemath
-sbxkb
 screen
 screenfetch
 scrot
