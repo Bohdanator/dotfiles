@@ -86,7 +86,7 @@ jq
 jupyter-notebook
 jupyterlab
 krita
-kvantum-qt5
+kvantum
 less
 lib32-mesa
 lib32-vulkan-icd-loader
@@ -196,7 +196,6 @@ speedtest-cli
 splix
 sqlite
 sqlitebrowser
-stellarium
 stow
 swi-prolog
 telegram-desktop

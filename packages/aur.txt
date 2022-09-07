@@ -1,11 +1,13 @@
 conan
 gdmap
 hunspell-sk
+minizinc-ide
 nerd-fonts-fira-code
 nvm
 pa-applet-git
 samsung-unified-driver-printer
 slack-desktop
+stellarium
 teams
 texlive-latexindent-meta
 timeshift-bin
