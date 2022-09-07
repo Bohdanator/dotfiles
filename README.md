@@ -1,10 +1,11 @@
 # Dotfiles
 
 My Linux configuration files. Features:
+
 - Boot loader: **Grub**
 - Distro: **Arch Linux** (dual-booting with Windows 10)
 - Display manager: **LightDM** with **LightDM GTK Greeter**
-- Window manager: **i3-gaps** (fitted for single-monitor as well as dual-monitor usage)
+- Window manager: **i3-gaps** (for single-monitor as well as dual-monitor usage)
 - Bar: **i3status**
 - Menu: **Rofi**
 - Notifications: **Dunst**

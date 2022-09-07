@@ -44,6 +44,7 @@ a working dual-boot system.
    1. `pacman -Syu grub efibootmgr os-prober ntfs-3g`
    1. `grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB`
    1. `mkdir /mnt/windows` and `mount /dev/yourWindowsPartition /mnt/windows`
+   1. `echo 'GRUB_DISABLE_OS_PROBER=false' >> /etc/default/grub`
    1. `grub-mkconfig -o /boot/grub/grub.cfg`
    1. `umount /mnt/windows`
 1. set root password with `passwd`
@@ -56,8 +57,9 @@ a working dual-boot system.
 
 1. `sudo systemctl enable --now NetworkManager` and make sure you are connected to the internet
 1. `timedatectl set-ntp true`
-1. set up Pacman and Yay
-   1. uncomment `Color` and the `[multilib]` section in `/etc/pacman.conf`
+1. set up pacman and yay
+   1. uncomment `Color`, `VerbosePkgLists`, `ParallelDownloads` and the `[multilib]` section in
+      `/etc/pacman.conf`
    1. `mkdir builds`
    1. `cd builds`
    1. `git clone https://aur.archlinux.org/yay-bin.git`
