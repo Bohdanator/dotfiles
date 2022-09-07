@@ -9,7 +9,7 @@ alias mdtopdf="pandoc --highlight-style kate -V papersize:a4 -V geometry:margin=
 alias busy="python -c 'while True: pass'"
 alias timer="termdown -f roman"
 alias ookla="speedtest --simple"
-alias ch="chezmoi"
+alias cz="chezmoi"
 
 hotspot() {
     sudo rm /tmp/create_ap.all.lock
