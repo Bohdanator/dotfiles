@@ -118,21 +118,21 @@ set $mode_display VGA (l)eft, VGA (r)ight, VGA (s)ame, HDMI l(e)ft, HDMI r(i)ght
 bindsym $mod+i mode "$mode_display"
 mode "$mode_display" {
     bindsym l exec --no-startup-id xrandr --output DP1   --auto --left-of  eDP1 \
-                   && nitrogen --restore, mode "default"
+                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
     bindsym r exec --no-startup-id xrandr --output DP1   --auto --right-of eDP1 \
-                   && nitrogen --restore, mode "default"
+                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
     bindsym s exec --no-startup-id xrandr --output DP1   --auto --same-as  eDP1 \
-                   && nitrogen --restore, mode "default"
+                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
     bindsym e exec --no-startup-id xrandr --output HDMI1 --auto --left-of  eDP1 \
-                   && nitrogen --restore, mode "default"
+                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
     bindsym i exec --no-startup-id xrandr --output HDMI1 --auto --right-of eDP1 \
-                   && nitrogen --restore, mode "default"
+                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
     bindsym a exec --no-startup-id xrandr --output HDMI1 --auto --same-as  eDP1 \
-                   && nitrogen --restore, mode "default"
+                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
     bindsym b exec --no-startup-id xrandr --output eDP1 --auto --pos 320x1440 --output HDMI1 --auto \
-                   && nitrogen --restore, mode "default"
+                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
     bindsym o exec --no-startup-id xrandr --output DP1 --off --output HDMI1 --off \
-                   && nitrogen --restore, mode "default"
+                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
 
     bindsym Return           mode "default"
     bindsym Escape           mode "default"
