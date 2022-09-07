@@ -67,15 +67,11 @@ a working dual-boot system.
    1. `makepkg -si`
    1. `cd ~`
 1. set up dotfiles and install software
-   1. `git clone` this dotfiles repository
-   1. `cd ~/dotfiles`
+   1. `cd Documents` and `git clone` this dotfiles repository
+   1. `cd dotfiles`
    1. `cat packages/official.txt | xargs -ot sudo pacman -Syu --needed`
    1. `cat packages/aur.txt | xargs -ot yay -Syu`
-   1. we are going to use GNU Stow to create symlinks
-      ([a tutorial](https://alexpearce.me/2016/02/managing-dotfiles-with-stow/)),
-      but we need to clone the directory structure first
-      1. `rsync -a --include '*/' --exclude '*' stow/ ~`
-      1. `stow stow`
+   1. `chezmoi init --apply -v -S ./chezmoi`
    1. `sudo usermod -aG docker,wireshark $USER`
    1. `sudo systemctl enable bluetooth cronie cups docker fstrim.timer lightdm nix-daemon tlp ufw`
    1. `sudo ufw enable`
@@ -83,6 +79,7 @@ a working dual-boot system.
    1. `chsh -s /bin/zsh`
    1. review/edit each file in the `templates` directory and copy it where it belongs (use `diff`
       to compare it with the system-provided file if it's present)
+      - you can use `sudo rsync -rv templates/ /` to copy all the files at once
 1. reboot
 
 Note: If you encounter black screen with no tty instead of LightDM startup on a system with Intel
