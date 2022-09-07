@@ -14,6 +14,7 @@ setxkbmap -option 'grp:win_space_toggle'
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 xfce4-power-manager &
+blueman-applet &
 pa-applet &
 nm-applet &
 parcellite &
