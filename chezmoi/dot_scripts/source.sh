@@ -7,8 +7,9 @@ alias bat="$SCRIPTSDIR/battery.sh"
 # UTILS
 alias mdtopdf="pandoc --highlight-style kate -V papersize:a4 -V geometry:margin=2.5cm -V urlcolor=blue -f gfm"
 alias busy="python -c 'while True: pass'"
-alias timer='termdown -f roman'
-alias ookla='speedtest --simple'
+alias timer="termdown -f roman"
+alias ookla="speedtest --simple"
+alias chez="chezmoi -S ~/Documents/dotfiles/chezmoi"
 
 hotspot() {
     sudo rm /tmp/create_ap.all.lock
