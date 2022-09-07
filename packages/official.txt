@@ -14,6 +14,7 @@ blender
 blueman
 bluez-utils
 caprine
+chezmoi
 chromium
 clang
 cloc
