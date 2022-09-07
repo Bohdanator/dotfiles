@@ -154,11 +154,13 @@ set $wsA "10:0  "
 set $wsB "11:- 切 "
 set $wsC "12:=  "
 
-# $ws0 at the end, so that $ws1 is used at startup
+# discover these first and use them at startup
 workspace $ws1 output eDP1
-workspace $ws2 output eDP1
-workspace $ws3 output eDP1
 workspace $ws4 output HDMI1
+# the rest
+workspace $ws0 output eDP1
+workspace $ws2 output eDP1
+workspace $ws3 output HDMI1
 workspace $ws5 output HDMI1
 workspace $ws6 output HDMI1
 workspace $ws7 output HDMI1
@@ -167,7 +169,6 @@ workspace $ws9 output eDP1
 workspace $wsA output eDP1
 workspace $wsB output eDP1
 workspace $wsC output eDP1
-workspace $ws0 output eDP1
 
 set $sp0 "scratch0"
 set $sp1 "scratch1"
