@@ -1,4 +1,4 @@
-export SCRIPTSDIR="$HOME/.scripts"
+export SCRIPTSDIR="$HOME/Documents/dotfiles/scripts"
 
 # OTHER SCRIPT FILES
 alias bat="$SCRIPTSDIR/battery.sh"
