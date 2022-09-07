@@ -92,8 +92,10 @@ alias glggo='git log --graph --oneline'
 alias glggp="git log --graph --pretty='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
 
 alias gpl='git pull'
+alias gplm='gcod && gpl && gco - && gcom && gpl && gco -'
 
 alias gps='git push'
+alias gpsf='git push -f'
 alias gpst='git push origin --tags'
 
 alias grb='git rebase'
@@ -135,8 +137,9 @@ alias goo='git status'
 
 alias gsm='git submodule'
 alias gsmu='git submodule update'
+alias gsmf='git submodule deinit -f . && git submodule update --init'
 
 alias gsw='git switch'
 
-alias gitfixsubmodules='git submodule deinit -f . && git submodule update --init'
-alias gitpullmain='gcod && gpl && gco - && gcom && gpl && gco -'
+alias gtg='git tag'
+alias gtga='git tag -a'
