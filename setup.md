@@ -53,6 +53,7 @@ a working dual-boot system.
 1. exit and reboot
 
 ## Post-installation
+
 1. `sudo systemctl enable --now NetworkManager` and make sure you are connected to the internet
 1. `timedatectl set-ntp true`
 1. set up Pacman and Yay
@@ -88,6 +89,7 @@ set `MODULES=(i915)` in `/etc/mkinitcpio.conf` and run `mkinitcpio -P` - this sh
 issue.
 
 ## Enable swap and hibernation
+
    1. `yay -Syu hibernator`
    1. `sudo hibernator 8G` (or other size)
       - You may need to run `grub-mkconfig -o /boot/grub/grub.cfg` manually afterwards.
@@ -97,6 +99,7 @@ issue.
       in case of problems)
 
 ## Last steps
+
 1. go through app settings
    - especially don't forget to tweak settings of the XFCE Power Manager
 1. `cat packages/vscode.txt | xargs -otn 1 code --install-extension`
