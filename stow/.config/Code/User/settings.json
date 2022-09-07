@@ -49,6 +49,8 @@
         "terminal.ansiCyan":    "#06989A",  "terminal.ansiBrightCyan":    "#34E2E2",
         "terminal.ansiWhite":   "#D3D7Cf",  "terminal.ansiBrightWhite":   "#EEEEEC",
     },
+    "terminal.integrated.minimumContrastRatio": 1,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
 
     // EXPLORER APPEARANCE
     "workbench.iconTheme": "material-icon-theme",
@@ -87,6 +89,7 @@
     // LATEX
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.view.pdf.color.dark.backgroundColor": "#1e1e1e",
 
     // LIVESHARE
     "liveshare.connectionMode": "relay",
@@ -101,13 +104,7 @@
     // "python.linting.mypyEnabled": true,
     "python.formatting.provider": "black",
 
-    // NOTEBOOKS
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-
     // JAVA
-    "java.configuration.checkProjectSettingsExclusions": false,
     "java.semanticHighlighting.enabled": true,
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
@@ -118,7 +115,7 @@
     // C++
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.includePath": [
-        "/usr/include/lpsolve/"
+        "/usr/include/lpsolve/",
     ],
 
     // JS
@@ -154,17 +151,14 @@
     ],
     "errorLens.enabled": false,
 
-    // OTHER
-    "terminal.integrated.enableMultiLinePasteWarning": false,
+    // PROJECT MANAGER
     "projectManager.git.baseFolders": [
         "~/Documents",
-        "~/dotfiles"
+        "~/dotfiles",
     ],
     "projectManager.git.maxDepthRecursion": 1,
-    "terminal.integrated.minimumContrastRatio": 1,
 
-    "latex-workshop.view.pdf.color.dark.backgroundColor": "#1e1e1e",
-    "editor.inlineSuggest.enabled": true,
+    // OTHER
 
 
 }
