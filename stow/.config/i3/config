@@ -319,6 +319,7 @@ for_window [title="Microsoft Teams Notification"] floating enable border normal
 for_window [class="SimpleScreenRecorder"]         floating enable border normal
 for_window [class="matplotlib"]                   floating enable border normal
 for_window [title="AiS2"]                         floating enable border normal
+for_window [class="Blueman-manager"]              floating enable border normal
 
 assign     [class="TelegramDesktop"]              $wsB
 assign     [class="Slack"]                        $wsC
