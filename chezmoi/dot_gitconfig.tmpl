@@ -1,0 +1,12 @@
+[user]
+    name = {{ .name }}
+    email = {{ .personal_email }}
+
+[pull]
+    ff = only
+
+[color]
+    ui = auto
+
+[includeIf "gitdir:~/Work/"]
+    path = ~/Work/.gitconfig
