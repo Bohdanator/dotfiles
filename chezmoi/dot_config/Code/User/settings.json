@@ -157,6 +157,7 @@
         "~/dotfiles",
     ],
     "projectManager.git.maxDepthRecursion": 1,
+    "editor.inlineSuggest.enabled": true,
 
     // OTHER
 
