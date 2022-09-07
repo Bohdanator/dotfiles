@@ -1,6 +1,7 @@
 {{- $name := promptString "Name" -}}
 {{- $personal_email := promptString "Personal email" -}}
 {{- $work_email := promptString "Work email" -}}
+{{- $school_username := promptString "School username" -}}
 
 sourceDir = "~/Documents/dotfiles/chezmoi"
 
@@ -8,3 +9,4 @@ sourceDir = "~/Documents/dotfiles/chezmoi"
     name = {{ $name | quote }}
     personal_email = {{ $personal_email | quote }}
     work_email = {{ $work_email | quote }}
+    school_username = {{ $school_username | quote }}

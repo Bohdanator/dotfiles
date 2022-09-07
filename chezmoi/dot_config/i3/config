@@ -328,4 +328,4 @@ for_window [title="htop"]                         mark $sp4, move scratchpad
 
 ################################### STARTUP ###################################
 
-exec --no-startup-id $HOME/Documents/dotfiles/scripts/startup.sh
+exec --no-startup-id $HOME/.scripts/startup.sh
