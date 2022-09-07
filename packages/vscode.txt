@@ -9,6 +9,7 @@ DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 DekkerOne.minizinc
 eamodio.gitlens
+editorconfig.editorconfig
 efbenson.scad
 esbenp.prettier-vscode
 flowtype.flow-for-vscode
