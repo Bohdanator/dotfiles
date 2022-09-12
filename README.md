@@ -29,3 +29,9 @@ In the case of interest take a look at the [setup guide](./setup.md).
 ![3](./pictures/03.png)
 
 ![4](./pictures/04.png)
+
+## Future plans
+
+- adding disk encryption
+- migrating to btrfs
+- fixing screen tearing and flickering
