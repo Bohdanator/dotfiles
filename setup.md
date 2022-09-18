@@ -99,8 +99,6 @@ issue.
 
 ## Last steps
 
-1. go through app settings
-   - especially don't forget to tweak settings of the XFCE Power Manager
 1. `cat packages/vscode.txt | xargs -otn 1 code --install-extension`
 1. `ln -s /usr/share/hunspell/* ~/.config/Code/Dictionaries`
 1. run `ssh-keygen` and `ssh-copy-id` the public key to all relevant SSH servers
@@ -108,6 +106,13 @@ issue.
    - you may need to enter the printer's URL manually, eg. it's `lpd://192.168.1.1/LPRServer` or
      `ipp://192.168.1.1/printers/ml-1520` for me, with the `Series` driver
 1. set a wallpaper with Nitrogen
+1. go through app settings
+   - don't forget to tweak settings of the XFCE Power Manager
+   - When setting up Firefox, I recommend using the uBlock Origin extension and adding these filter
+     lists:
+     - `Fanboy’s Annoyance`
+     - `uBlock filters – Annoyances`
+     - `CZE, SVK: EasyList Czech and Slovak`
 1. test everything thoroughly (eg. sound/headphones/microphone, bluetooth, media keys, online screen
    sharing, ...)
 1. create a backup (eg. with Timeshift)
