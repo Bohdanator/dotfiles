@@ -26,6 +26,7 @@ humao.rest-client
 jakearl.search-editor-apply-changes
 James-Yu.latex-workshop
 javierartero.equality
+jeff-hykin.better-cpp-syntax
 koehlma.markdown-math
 liximomo.sftp
 lyzerk.linecounter
@@ -35,7 +36,7 @@ ms-azuretools.vscode-docker
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
-ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
 ms-vscode.hexeditor
 ms-vsliveshare.vsliveshare
 naumovs.color-highlight
@@ -49,7 +50,6 @@ silvenon.mdx
 spmeesseman.vscode-taskexplorer
 stkb.rewrap
 svelte.svelte-vscode
-twxs.cmake
 usernamehw.errorlens
 znck.grammarly
 zxh404.vscode-proto3

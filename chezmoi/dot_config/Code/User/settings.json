@@ -79,12 +79,15 @@
     "grammarly.hideUnavailablePremiumAlerts": true,
 
     // GIT
+    "scm.repositories.sortOrder": "path",
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "gitlens.codeLens.scopes": ["document"],
     "gitlens.menus": { "editorGroup": false },
     "gitlab.showPipelineUpdateNotifications": true,
     "gitlab.showStatusBarLinks": false,
+    "github.gitProtocol": "ssh",
+    "githubPullRequests.pullBranch": "never",
 
     // LATEX
     "latex-workshop.view.pdf.viewer": "tab",
@@ -157,9 +160,17 @@
         "~/dotfiles",
     ],
     "projectManager.git.maxDepthRecursion": 1,
-    "editor.inlineSuggest.enabled": true,
+
+    // COPILOT
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true,
+    },
 
     // OTHER
+    "editor.inlineSuggest.enabled": true,
 
 
 }
