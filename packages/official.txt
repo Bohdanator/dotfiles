@@ -175,7 +175,6 @@ python-pylint
 python-scipy
 python-sympy
 python-virtualenv
-python2
 qt5ct
 ranger
 reflector
