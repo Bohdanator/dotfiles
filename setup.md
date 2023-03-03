@@ -3,8 +3,6 @@
 Tip: there is no scrollback on tty. You can use `screen` or `tee` to preserve the output of a
 command.
 
-Tip: You can use `nmtui` to connect to a wireless network from the command line easily.
-
 ## Installation
 
 This part follows the
@@ -17,14 +15,14 @@ a working dual-boot system.
 1. acquire an installation image, prepare an installation medium and boot the live environment
 1. verify the boot mode by running `ls /sys/firmware/efi/efivars` (should print something without
    an error)
-1. make sure you are connected to the internet
+1. make sure you are connected to the internet (`iwctl` -> `station wlan0 connect yourSSID`)
 1. `timedatectl set-ntp true`
-1. create a partition for the root directory (we will call it `/dev/yourRoot`) and format it
-   (eg. `mkfs.ext4 /dev/yourRoot`)
-   - run `sudo parted` and type `align-check optimal x` with proper `x`
-1. `mount /dev/yourRoot /mnt`
+1. create a partition for the root directory (we will call it `/dev/nvme0n1pX`) and format it
+   (eg. `mkfs.ext4 /dev/nvme0n1pX`)
+   - run `parted /dev/nvme0n1` and type `align-check optimal x` with proper `x`
+1. `mount /dev/nvme0n1pX /mnt`
 1. `mkdir /mnt/efi` and `mount /dev/yourESP /mnt/efi`
-1. `pacstrap /mnt base base-devel linux linux-firmware intel-ucode networkmanager sudo nano git`
+1. `pacstrap /mnt base base-devel linux linux-firmware intel-ucode networkmanager sudo nano git xdg-user-dirs`
    - replace `intel-ucode` by `amd-ucode` (if you have an AMD CPU) and the `linux` package by
      `linux-lts` (if you wish)
 1. `genfstab -U /mnt >> /mnt/etc/fstab`
@@ -45,6 +43,7 @@ a working dual-boot system.
    1. `grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB`
    1. `mkdir /mnt/windows` and `mount /dev/yourWindowsPartition /mnt/windows`
    1. `echo 'GRUB_DISABLE_OS_PROBER=false' >> /etc/default/grub`
+      - [tmp] add `i8042.dumbkbd=1` to the end of `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`
    1. `grub-mkconfig -o /boot/grub/grub.cfg`
    1. `umount /mnt/windows`
 1. set root password with `passwd`
@@ -55,8 +54,9 @@ a working dual-boot system.
 
 ## Post-installation
 
+1. `xdg-user-dirs-update`
 1. `sudo systemctl enable --now NetworkManager` and make sure you are connected to the internet
-1. `timedatectl set-ntp true`
+1. `sudo timedatectl set-ntp true`
 1. set up pacman and yay
    1. uncomment `Color`, `VerbosePkgLists`, `ParallelDownloads` and the `[multilib]` section in
       `/etc/pacman.conf`

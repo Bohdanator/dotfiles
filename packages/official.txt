@@ -9,6 +9,7 @@ arc-gtk-theme
 atool
 audacity
 awesome-terminal-fonts
+base-devel
 bc
 blender
 blueman
@@ -73,7 +74,7 @@ htop
 hunspell
 hunspell-en_us
 hwinfo
-i3-gaps
+i3-wm
 i3status
 imagemagick
 inkscape
@@ -134,7 +135,7 @@ numlockx
 openssh
 p7zip
 pacman-contrib
-pandoc
+pandoc-cli
 papirus-icon-theme
 parcellite
 parted
@@ -172,6 +173,7 @@ python-poetry
 python-pre-commit
 python-pygame
 python-pylint
+python-scikit-learn
 python-scipy
 python-sympy
 python-virtualenv
@@ -217,6 +219,7 @@ ttf-dejavu
 ttf-droid
 ttf-fira-code
 ttf-fira-sans
+ttf-firacode-nerd
 ttf-inconsolata
 ttf-liberation
 ttf-opensans
@@ -240,7 +243,6 @@ wget
 wireshark-qt
 wmctrl
 xarchiver
-xdg-user-dirs
 xdg-utils
 xf86-input-evdev
 xf86-input-libinput
