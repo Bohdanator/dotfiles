@@ -5,3 +5,11 @@ sourceDir = "~/Documents/dotfiles/chezmoi"
     personal_email = "{{- promptString "Personal email" -}}"
     work_email = "{{- promptString "Work email" -}}"
     school_username = "{{- promptString "School username" -}}"
+
+[edit]
+    command = "code"
+    args = ["--wait"]
+
+[merge]
+    command = "code"
+    args = ["--wait", "--diff", "{{ .Source }}", "{{ .Destination }}"]

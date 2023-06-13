@@ -1,0 +1,45 @@
+
+#window {
+    background-color: rgba(32, 32, 32, 0.95);
+    color: #F0F0F0;
+    border: 2px solid #3465A4;
+    font-family: "Fira Code";
+    font-size: 18px;
+}
+
+#input {
+    background-color: transparent;
+    color: #F0F0F0;
+    border: 2px solid #3465A4;
+    border-radius: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#entry, expander #entry {
+    background-color: transparent;
+    margin-left: 16px;
+}
+
+#entry:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+list {
+    background-color: transparent;
+}
+
+expander {
+    margin-left: -16px;
+}
+
+#entry:selected {
+    background-color: #3465A4;
+    border: 0px;
+    border-radius: 0px;
+}
+
+#img {
+    min-width: 30px;
+    margin-right: 5px;
+}

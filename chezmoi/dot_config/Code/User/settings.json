@@ -1,7 +1,7 @@
 {
     // GENERAL
     "telemetry.telemetryLevel": "off",
-    "workbench.colorTheme": "Default Dark+",
+    // "workbench.colorTheme": "Default Dark+",
     "window.menuBarVisibility": "toggle",
     // "window.titleBarStyle": "custom",
     "extensions.ignoreRecommendations": false,
@@ -19,9 +19,9 @@
     // EDITOR APPEARANCE
     "editor.scrollBeyondLastLine": false,
     "editor.wordWrap": "on",
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorBlinking": "smooth",
-    "editor.fontFamily": "'Fira Code', 'Noto Mono', Consolas, monospace",
+    "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', 'Noto Mono', Consolas, monospace",
     "editor.fontLigatures": true,
     "disableLigatures.mode": "Cursor",
     "editor.renderWhitespace": "all",

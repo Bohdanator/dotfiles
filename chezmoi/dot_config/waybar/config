@@ -1,0 +1,92 @@
+{
+    "position": "bottom",
+    "height": 30,
+    "spacing": 0,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "sway/scratchpad",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "cpu",
+        "network",
+        "clock",
+        "sway/language",
+        "tray"
+    ],
+    "sway/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{name}"
+    },
+    "sway/mode": {
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "format-icons": [" ", " "],
+        "show-empty": true,
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume:02}%  {format_source}",
+        "format-muted": "󰸈 {volume:02}%  {format_source}",
+        "format-bluetooth": " {volume:02}%  {format_source}",
+        "format-bluetooth-muted": "󰂲 {volume:02}%  {format_source}",
+        "format-source": "󰍬 {volume:02}%",
+        "format-source-muted": "󰍭 {volume:02}%",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 5
+    },
+    "backlight": {
+        "interval": 2,
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+        "scroll-step": 5,
+        "tooltip": false
+    },
+    "battery": {
+        "interval": 10,
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "states": {
+            "warning": 20,
+            "critical": 5
+        }
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "  {usage:02}%",
+        "tooltip": false
+    },
+    "network": {
+        "interval": 5,
+        "format-disconnected": "󰌙  (disconnected)",
+        "format-linked": "󰌘  {ifname} (no IP)",
+        "format-wifi": "{icon} {essid} {signalStrength}%",
+        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%a %d. %m. <b>%H:%M:%S</b>}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+    "sway/language": {
+        "format": "{flag} ",
+        "tooltip-format": "{long}"
+    },
+    "tray": {
+        "show-passive-items": true,
+        "spacing": 10
+    }
+}

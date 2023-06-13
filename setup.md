@@ -9,8 +9,8 @@ This part follows the
 [official installation guide](https://wiki.archlinux.org/index.php/Installation_guide),
 consult it in case of doubt.
 
-This guide assumes an installation of Windows 10 (on GPT & UEFI) on the same disk and results in
-a working dual-boot system.
+This guide assumes an installation of Windows 11 (on GPT & UEFI) on the same disk and results in
+a working dual-boot system (though youmind need to toggle Secure Boot when switching the OS).
 
 1. acquire an installation image, prepare an installation medium and boot the live environment
 1. verify the boot mode by running `ls /sys/firmware/efi/efivars` (should print something without
@@ -39,13 +39,13 @@ a working dual-boot system.
    127.0.1.1	yourHostname
    ```
 1. install GRUB
-   1. `pacman -Syu grub efibootmgr os-prober ntfs-3g`
+   1. `pacman -Syu grub efibootmgr`
    1. `grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB`
-   1. `mkdir /mnt/windows` and `mount /dev/yourWindowsPartition /mnt/windows`
-   1. `echo 'GRUB_DISABLE_OS_PROBER=false' >> /etc/default/grub`
-      - [tmp] add `i8042.dumbkbd=1` to the end of `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`
+   1. modify `/etc/default/grub`:
+      1. set `GRUB_TIMEOUT=1`
+      1. add `zswap.enabled=0` to `GRUB_CMDLINE_LINUX` (so that it doesn't interfere with zram that will be installed later)
+      1. all other modifications that are needed - see Device-specific notes below
    1. `grub-mkconfig -o /boot/grub/grub.cfg`
-   1. `umount /mnt/windows`
 1. set root password with `passwd`
 1. `useradd -m -G wheel yourUsername`
 1. `passwd yourUsername`
@@ -73,47 +73,45 @@ a working dual-boot system.
    1. `cat packages/aur.txt | xargs -ot yay -Syu`
    1. `chezmoi init --apply -v -S ./chezmoi`
    1. `sudo usermod -aG docker,wireshark $USER`
-   1. `sudo systemctl enable bluetooth cronie cups docker fstrim.timer lightdm nix-daemon tlp ufw`
+   1. `sudo systemctl enable bluetooth cronie cups docker fstrim.timer greetd nix-daemon thermald tlp ufw`
    1. `sudo ufw enable`
-   1. `sudo paperconfig -p a4`
    1. `chsh -s /bin/zsh`
-   1. review/edit each file in the `templates` directory and copy it where it belongs (use `diff`
-      to compare it with the system-provided file if it's present)
-      - you can use `sudo rsync -rv templates/ /` to copy all the files at once
+   1. copy files from `~/.root-src` where they belong (use `diff` to compare them with the
+      system-provided files if they are present)
+      - you can use `sudo rsync -rv ~/.root-src/ /` to copy all the files at once
+   1. `rustup default stable`
+   1. `cat packages/vscode.txt | xargs -otn 1 code --install-extension`
+   1. `ln -s /usr/share/hunspell/* ~/.config/Code/Dictionaries`
 1. reboot
-
-Note: If you encounter black screen with no tty instead of LightDM startup on a system with Intel
-graphics, try to uninstall `xf86-video-intel`. If the problem vanishes, try to install it back and
-set `MODULES=(i915)` in `/etc/mkinitcpio.conf` and run `mkinitcpio -P` - this should solve the
-issue.
-
-## Enable swap and hibernation
-
-   1. `yay -Syu hibernator`
-   1. `sudo hibernator 8G` (or other size)
-      - You may need to run `grub-mkconfig -o /boot/grub/grub.cfg` manually afterwards.
-   1. `echo vm.swappiness=20 | sudo tee /etc/sysctl.d/99-swappiness.conf`
-   1. reboot and check if everything works (consult eg.
-      [this tutorial](https://confluence.jaytaala.com/display/TKB/Use+a+swap+file+and+enable+hibernation+on+Arch+Linux+-+including+on+a+LUKS+root+partition)
-      in case of problems)
 
 ## Last steps
 
-1. `cat packages/vscode.txt | xargs -otn 1 code --install-extension`
-1. `ln -s /usr/share/hunspell/* ~/.config/Code/Dictionaries`
+1. check that your Windows system works as expected
+1. configure Windows to store time in UTC - run this in Administrator Command Prompt: `reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f`
+1. set your wallpaper by creating an image file/symlink `~/wallpaper`
 1. run `ssh-keygen` and `ssh-copy-id` the public key to all relevant SSH servers
 1. visit `http://localhost:631` and install your printers
-   - you may need to enter the printer's URL manually, eg. it's `lpd://192.168.1.1/LPRServer` or
-     `ipp://192.168.1.1/printers/ml-1520` for me, with the `Series` driver
-1. set a wallpaper with Nitrogen
 1. go through app settings
-   - don't forget to tweak settings of the XFCE Power Manager
-   - When setting up Firefox, I recommend using the uBlock Origin extension and adding these filter
-     lists:
+   - don't forget to check TLP settings
+   - When setting up Firefox:
+     - set `media.ffmpeg.vaapi.enabled=true` in `about:config` to enable hardware accelereation
+     - I recommend using the uBlock Origin extension and adding these filter lists:
      - `Fanboy’s Annoyance`
      - `uBlock filters – Annoyances`
      - `CZE, SVK: EasyList Czech and Slovak`
+     - `EasyList – Cookie Notices`
 1. test everything thoroughly (eg. sound/headphones/microphone, bluetooth, media keys, online screen
    sharing, ...)
-1. create a backup (eg. with Timeshift)
-1. Enjoy!
+
+---
+
+## Device-specific notes
+
+- My keyboard is not detected after booting. To resolve this, try to add `i8042.dumbkbd=1` to the end of `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub` in between grub-install and grub-mkconfig (CapsLock/... indicators won't work though).
+
+- If you encounter black screen with no tty instead of login manager startup on a system with Intel
+graphics, try to uninstall `xf86-video-intel`. If the problem vanishes, install it back,
+set `MODULES=(i915)` in `/etc/mkinitcpio.conf` and run `mkinitcpio -P` - this should solve the
+issue.
+
+- When adding a printer, you may need to enter the printer's URL manually, eg. it's `lpd://192.168.1.1/LPRServer` or `ipp://192.168.1.1/printers/ml-1520` for me, with the `Series` driver.

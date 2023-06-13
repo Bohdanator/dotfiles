@@ -1,0 +1,7 @@
+mode=drun
+width=1000
+height=490
+allow_images=true
+insensitive=true
+key_expand=Tab
+image_size=24

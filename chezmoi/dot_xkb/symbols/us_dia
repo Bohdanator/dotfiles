@@ -1,0 +1,4 @@
+xkb_symbols "us_dia" {
+    include "us"
+    key <LSGT> { [ dead_acute, dead_caron ] };
+};

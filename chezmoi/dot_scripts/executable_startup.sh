@@ -1,27 +1,13 @@
 #!/bin/bash
 
-touchpad_id=$(xinput --list | grep -i "Touchpad" | xargs -n 1 | grep "id=" | sed 's/id=//g')
-natural_scrolling_code=$(xinput --list-props "$touchpad_id" | grep "Natural Scrolling" | awk '{print $5}' |  grep -o '[0-9]\+')
-xinput --set-prop "$touchpad_id" "$natural_scrolling_code" 1
-tapping_code=$(xinput --list-props "$touchpad_id" | grep "Tapping" | awk '{print $4}' |  grep -o '[0-9]\+')
-xinput --set-prop "$touchpad_id" "$tapping_code" 1
-
-xset m 20/10 10 r rate 180 20 b off
-
-gxkb &
-setxkbmap -layout 'us,sk(qwerty)'
-setxkbmap -option 'grp:win_space_toggle'
-
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-xfce4-power-manager &
 blueman-applet &
-pa-applet &
-nm-applet &
-parcellite &
+nm-applet --indicator &
+wl-paste --watch clipman store --no-persist &
 
-xrandr --output eDP1 --gamma 0.9:1.0:0.8
-xrandr --output eDP1 --auto --primary --output DP1 --off --output HDMI1 --off
-sleep 1
-nitrogen --restore
-sleep 1
-picom -b
+gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+gsettings set org.gnome.desktop.interface font-name 'Noto Sans 10'
+
+systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP DBUS_SESSION_BUS_ADDRESS XAUTHORITY

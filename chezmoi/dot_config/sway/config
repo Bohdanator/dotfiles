@@ -6,42 +6,65 @@
 # mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
+bar swaybar_command waybar
+
 gaps inner 10
 smart_gaps on
 
-default_border                pixel 1
+default_border                pixel 2
 default_floating_border       normal
 smart_borders                 on
 floating_modifier             $mod
 focus_follows_mouse           no
+mouse_warping                 none
 workspace_auto_back_and_forth yes
-for_window [class=".*"]       title_format  "%title (%class)"
+for_window [title="."]        title_format "<b>%title</b> (%app_id)"
 
 font pango:Noto Sans 10
 
 # class                 border  bground text    indicator child_border
-client.focused          #729FCF #3465A4 #FFFFFF #34E2E2   #3465A4
-client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
-client.unfocused        #333333 #222222 #888888 #292D2E   #222222
-client.urgent           #2F343A #fce94f #FFFFFF #fce94f   #fce94f
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.focused          #729FCF #3465A4 #FFFFFF #3465A4   #3465A4
+client.focused_inactive #333333 #333333 #888888 #3465A4   #333333
+client.unfocused        #5F676A #5F676A #FFFFFF #3465A4   #5F676A
+client.urgent           #2F343A #FCE94F #FFFFFF #3465A4   #FCE94F
 
-client.background       #000000
+##################################### INPUT ####################################
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+}
+
+input type:keyboard {
+    xkb_layout "us_dia,sk(qwerty)"
+    xkb_options "grp:win_space_toggle,caps:none"
+    repeat_delay 180
+    repeat_rate 20
+}
 
 ################################### BINDINGS ###################################
 
+# media
+bindsym XF86AudioMute              exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume       exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume       exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioMicMute           exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym Ctrl+XF86AudioLowerVolume  exec pactl set-source-volume @DEFAULT_SOURCE@ -5%
+bindsym Ctrl+XF86AudioRaiseVolume  exec pactl set-source-volume @DEFAULT_SOURCE@ +5%
+bindsym XF86MonBrightnessDown      exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp        exec brightnessctl set 5%+
+bindsym Ctrl+XF86MonBrightnessDown exec brightnessctl set 20%-
+bindsym Ctrl+XF86MonBrightnessUp   exec brightnessctl set 20%+
+
 # restarting services
 bindsym $mod+Shift+c         reload
-bindsym $mod+Shift+r         restart
-bindsym $mod+Shift+d         --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym $mod+t               exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t          exec --no-startup-id picom -b
+bindsym $mod+Shift+d         exec --release killall dunst; exec notify-send 'restart dunst'
 
 # apearence
 bindsym $mod+u               border none
-bindsym $mod+y               border pixel 1
+bindsym $mod+y               border pixel 2
 bindsym $mod+n               border normal
-bindsym $mod+m               bar mode toggle
+bindsym $mod+m               exec killall -SIGUSR1 waybar
 
 # layout
 bindsym $mod+Shift+q         kill
@@ -57,118 +80,139 @@ bindsym $mod+g               focus mode_toggle
 bindsym $mod+Shift+s         sticky toggle
 
 # menu
-bindsym $mod+Tab             exec --no-startup-id rofi -show drun
-bindsym Mod1+Tab             exec --no-startup-id rofi -show window
+bindsym $mod+Tab             exec --no-startup-id wofi
 
 # screnshots
 bindsym Print                exec --no-startup-id \
-                             "cd $HOME/Pictures; scrot; notify-send 'screenshot captured'"
+                             "cd $HOME/Pictures; grim; notify-send 'screenshot captured'"
 bindsym Ctrl+Print           exec --no-startup-id flameshot gui
 
 # app shortcuts
 bindsym $mod+Return          exec --no-startup-id lxterminal
-bindsym $mod+Shift+Return    exec --no-startup-id lxterminal -e htop
-bindsym $mod+Shift+BackSpace exec --no-startup-id lxterminal -e ipython
+bindsym $mod+Shift+Return    exec --no-startup-id lxterminal -e ipython
+bindsym $mod+BackSpace       exec --no-startup-id lxterminal -e htop
 bindsym $mod+x               exec firefox
 bindsym $mod+d               exec thunar
 bindsym $mod+c               exec code
 bindsym $mod+Ctrl+m          exec pavucontrol
 bindsym $mod+Ctrl+x          --release exec --no-startup-id xkill
 
-bindsym $mod+BackSpace       exec --no-startup-id telegram-desktop, \
-                             exec --no-startup-id slack, \
-                             exec --no-startup-id lxterminal -e ipython, \
-                             exec --no-startup-id lxterminal -e htop
+################################### EXITING ####################################
 
-#################################### MODES #####################################
+exec swayidle -w \
+    timeout 300 'swaymsg "output * power off"' \
+    resume      'swaymsg "output * power on"'
 
-set $mode_system (l)ock, (e)xit, switch (u)ser, (s)uspend, (h)ibernate, (r)eboot, shut(d)own
+bindswitch lid:on  output eDP-1 power off
+bindswitch lid:off output eDP-1 power on
+
+set $mode_system (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, shut(d)own
 bindsym $mod+o mode "$mode_system"
 mode "$mode_system" {
-    bindsym l      exec --no-startup-id dm-tool lock,                      mode "default"
-    bindsym e      exec --no-startup-id i3-msg exit,                       mode "default"
-    bindsym u      exec --no-startup-id dm-tool switch-to-greeter,         mode "default"
-    bindsym s      exec --no-startup-id dm-tool lock && systemctl suspend, mode "default"
-    bindsym h      exec --no-startup-id systemctl hibernate,               mode "default"
-    bindsym r      exec --no-startup-id systemctl reboot,                  mode "default"
-    bindsym d      exec --no-startup-id systemctl poweroff,                mode "default"
+    bindsym l exec --no-startup-id waylock -fork-on-lock, mode "default"
+    bindsym e exec --no-startup-id swaymsg exit,          mode "default"
+    bindsym s exec --no-startup-id waylock -fork-on-lock && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id systemctl hibernate,   mode "default"
+    bindsym r exec --no-startup-id systemctl reboot,      mode "default"
+    bindsym d exec --no-startup-id systemctl poweroff,    mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 
+################################### RESIZING ###################################
+
 bindsym $mod+r mode "resize"
 mode "resize" {
-    bindsym j                resize shrink width  20 px or 2 ppt
-    bindsym k                resize grow   height 20 px or 2 ppt
-    bindsym l                resize shrink height 20 px or 2 ppt
-    bindsym semicolon        resize grow   width  20 px or 2 ppt
+    bindsym j         resize shrink width  30px
+    bindsym k         resize grow   height 30px
+    bindsym l         resize shrink height 30px
+    bindsym semicolon resize grow   width  30px
 
-    bindsym Left             resize shrink width  20 px or 2 ppt
-    bindsym Down             resize grow   height 20 px or 2 ppt
-    bindsym Up               resize shrink height 20 px or 2 ppt
-    bindsym Right            resize grow   width  20 px or 2 ppt
+    bindsym Left      resize shrink width  30px
+    bindsym Down      resize grow   height 30px
+    bindsym Up        resize shrink height 30px
+    bindsym Right     resize grow   width  30px
 
-    bindsym Return           mode "default"
-    bindsym Escape           mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
-set $mode_display VGA (l)eft, VGA (r)ight, VGA (s)ame, HDMI l(e)ft, HDMI r(i)ght, HDMI s(a)me,\
- HDMI a(b)ove, (o)ff
+################################### OUTPUTS ####################################
+
+output eDP-1 scale 1.5
+output "*" bg ~/wallpaper fill
+
+# 3072x1920 - eDP-1 at scale 1
+# 2048x1280 - eDP-1 at scale 1.5
+# 2560x1440 - HDMI-A-1
+# 256x80 - half-differences
+
+#                           v 2560         v 4864
+#        v 0            v 2304         v 4608             v 7168
+#    0 >                 ------------------
+#                       |                  |
+#                       |                  |
+#                       |                  |
+#                       |      above       |
+#                       |                  |
+# 1360 >  --------------|---            ---|--------------
+#        |              |   |          |   |              |
+# 1440 > |               ---|----------|---               |
+#        |                  |          |                  |
+#        |       left       |  eDP-1   |      right       |
+#        |                  |          |                  |
+# 2720 > |                  |----------|                  |
+#        |                  |          |                  |
+# 2800 >  ------------------            ------------------
+
+# defaults (HDMI-A-1 above eDP-1)
+output HDMI-A-1 enable pos 2304 0
+output eDP-1    enable pos 2560 1440
+
+set $mode_display HDMI l(e)ft, HDMI r(i)ght, HDMI a(b)ove, (o)ff
 bindsym $mod+i mode "$mode_display"
 mode "$mode_display" {
-    bindsym l exec --no-startup-id xrandr --output DP1   --auto --left-of  eDP1 \
-                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
-    bindsym r exec --no-startup-id xrandr --output DP1   --auto --right-of eDP1 \
-                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
-    bindsym s exec --no-startup-id xrandr --output DP1   --auto --same-as  eDP1 \
-                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
-    bindsym e exec --no-startup-id xrandr --output HDMI1 --auto --left-of  eDP1 \
-                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
-    bindsym i exec --no-startup-id xrandr --output HDMI1 --auto --right-of eDP1 \
-                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
-    bindsym a exec --no-startup-id xrandr --output HDMI1 --auto --same-as  eDP1 \
-                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
-    bindsym b exec --no-startup-id xrandr --output eDP1 --auto --pos 320x1440 --output HDMI1 --auto \
-                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
-    bindsym o exec --no-startup-id xrandr --output DP1 --off --output HDMI1 --off \
-                   && nitrogen --restore && sleep 2 && nitrogen --restore, mode "default"
+    bindsym e output HDMI-A-1 enable pos    0 1360, mode "default"
+    bindsym i output HDMI-A-1 enable pos 4608 1360, mode "default"
+    bindsym b output HDMI-A-1 enable pos 2304    0, mode "default"
+    bindsym o output DP1 disable, output HDMI-A-1 disable, mode "default"
 
-    bindsym Return           mode "default"
-    bindsym Escape           mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 ########################## WORKSPACES AND SCRATCHPADS ##########################
 
 set $ws0 "0:'   "
-set $ws1 "1:1  "
-set $ws2 "2:2  "
-set $ws3 "3:3  "
-set $ws4 "4:4 ﬏ "
-set $ws5 "5:5 ﬏ "
-set $ws6 "6:6 ﬏ "
-set $ws7 "7:7 ﬏ "
-set $ws8 "8:8 ﬏ "
+set $ws1 "1:1 󰈹 "
+set $ws2 "2:2 󰈹 "
+set $ws3 "3:3 󰨞 "
+set $ws4 "4:4 󰨞 "
+set $ws5 "5:5 󰨞 "
+set $ws6 "6:6 󰨞 "
+set $ws7 "7:7 󰨞 "
+set $ws8 "8:8   "
 set $ws9 "9:9   "
-set $wsA "10:0  "
-set $wsB "11:- 切 "
-set $wsC "12:=  "
+set $wsA "10:0   "
+set $wsB "11:-  "
+set $wsC "12:= 󰒱 "
 
 # discover these first and use them at startup
-workspace $ws1 output eDP1
-workspace $ws4 output HDMI1
+workspace $ws1 output eDP-1
+workspace $ws3 output HDMI-A-1
 # the rest
-workspace $ws0 output eDP1
-workspace $ws2 output eDP1
-workspace $ws3 output HDMI1
-workspace $ws5 output HDMI1
-workspace $ws6 output HDMI1
-workspace $ws7 output HDMI1
-workspace $ws8 output HDMI1
-workspace $ws9 output eDP1
-workspace $wsA output eDP1
-workspace $wsB output eDP1
-workspace $wsC output eDP1
+workspace $ws0 output eDP-1
+workspace $ws2 output HDMI-A-1
+workspace $ws4 output HDMI-A-1
+workspace $ws5 output HDMI-A-1
+workspace $ws6 output HDMI-A-1
+workspace $ws7 output HDMI-A-1
+workspace $ws8 output eDP-1
+workspace $ws9 output eDP-1
+workspace $wsA output eDP-1
+workspace $wsB output eDP-1
+workspace $wsC output eDP-1
 
 set $sp0 "scratch0"
 set $sp1 "scratch1"
@@ -219,6 +263,10 @@ bindsym $mod+equal           workspace $wsC
 bindsym $mod+Ctrl+Left       workspace prev
 bindsym $mod+Ctrl+Right      workspace next
 bindsym $mod+b               workspace back_and_forth
+bindgesture swipe:left       workspace next_on_output
+bindgesture swipe:right      workspace prev_on_output
+bindgesture swipe:up         focus output up
+bindgesture swipe:down       focus output down
 
 # move the focused window/container to a workspace
 bindsym $mod+Ctrl+grave      move container to workspace $ws0
@@ -253,78 +301,34 @@ bindsym $mod+Shift+b         move container to workspace back_and_forth; workspa
 
 # move to a scratchpad / view a scratchpad
 bindsym $mod+Shift+p            mark      $sp0, move scratchpad
-bindsym $mod+p                  [con_mark=$sp0] scratchpad show
+bindsym $mod+p                  [con_mark=$sp0] scratchpad show, move position center, resize set 1200px 900px
 bindsym $mod+Shift+bracketleft  mark      $sp1, move scratchpad
-bindsym $mod+bracketleft        [con_mark=$sp1] scratchpad show
+bindsym $mod+bracketleft        [con_mark=$sp1] scratchpad show, move position center, resize set 1200px 900px
 bindsym $mod+Shift+bracketright mark      $sp2, move scratchpad
-bindsym $mod+bracketright       [con_mark=$sp2] scratchpad show
+bindsym $mod+bracketright       [con_mark=$sp2] scratchpad show, move position center, resize set 1200px 900px
 bindsym $mod+Shift+apostrophe   mark      $sp3, move scratchpad
-bindsym $mod+apostrophe         [con_mark=$sp3] scratchpad show
+bindsym $mod+apostrophe         [con_mark=$sp3] scratchpad show, move position center, resize set 1200px 900px
 bindsym $mod+Shift+backslash    mark      $sp4, move scratchpad
-bindsym $mod+backslash          [con_mark=$sp4] scratchpad show
+bindsym $mod+backslash          [con_mark=$sp4] scratchpad show, move position center, resize set 1200px 900px
+
 bindsym $mod+Shift+slash                        move scratchpad
-bindsym $mod+slash                              scratchpad show
+bindsym $mod+slash                              scratchpad show, move position center, resize set 1200px 900px
 
 # move the focused workspace to an output
 bindsym $mod+Ctrl+Up            move workspace to output up
 bindsym $mod+Ctrl+Down          move workspace to output right
 
-#################################### i3bar #####################################
-
-bar {
-    i3bar_command i3bar
-    status_command i3status
-    position bottom
-    bindsym button4 nop
-    bindsym button5 nop
-    strip_workspace_numbers yes
-    tray_output eDP1
-
-    font pango:Fira Code Nerd Font 12
-    colors {
-        background #18181B
-        statusline #F9F9F9
-        separator  #808080
-        #                   border    bg     text
-        focused_workspace  #729FCF #3465A4 #FFFFFF
-        active_workspace   #729FCF #33455B #FFFFFF
-        inactive_workspace #555555 #333333 #FFFFFF
-        urgent_workspace   #FCE94F #C4A000 #FFFFFF
-        binding_mode       #34E2E2 #06989A #FFFFFF
-    }
-}
-
 ################################# APP DEFAULTS #################################
 
-for_window [title="alsamixer"]                    floating enable border normal
-for_window [class="Clipgrab"]                     floating enable border normal
-for_window [title="File Transfer*"]               floating enable border normal
-for_window [class="fpakman"]                      floating enable border normal
-for_window [class="Galculator"]                   floating enable border normal
-for_window [class="GParted"]                      floating enable border normal
-for_window [class="Lightdm-settings"]             floating enable border normal
-for_window [class="Lxappearance"]                 floating enable border normal
-for_window [title="MuseScore: Play Panel"]        floating enable border normal
-for_window [class="Nitrogen"]                     floating enable border normal
-for_window [class="Pavucontrol"]                  floating enable border normal
-for_window [class="qt5ct"]                        floating enable border normal
-for_window [class="Qtconfig-qt4"]                 floating enable border normal
-for_window [class="Simple-scan"]                  floating enable border normal
-for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"]                        floating enable border normal
-for_window [class="Timeset-gui"]                  floating enable border normal
-for_window [class="(?i)virtualbox"]               floating enable border normal
-for_window [class="Xfburn"]                       floating enable border normal
-for_window [title="Microsoft Teams Notification"] floating enable border normal
-for_window [class="SimpleScreenRecorder"]         floating enable border normal
-for_window [class="matplotlib"]                   floating enable border normal
-for_window [title="AiS2"]                         floating enable border normal
-for_window [class="Blueman-manager"]              floating enable border normal
+for_window [app_id="^pavucontrol$"]                         floating enable, resize set 1200px 900px
+for_window [app_id="^nm-connection-editor$"]                floating enable, resize set 800px 600px
+for_window [app_id="^blueman-manager$"]                     floating enable, resize set 800px 600px
+for_window [app_id="^org.matplotlib.Matplotlib3$"]          floating enable
 
-assign     [class="TelegramDesktop"]              $wsB
-assign     [class="Slack"]                        $wsC
-for_window [title="IPython: .*"]                  mark $sp2, move scratchpad
-for_window [title="htop"]                         mark $sp4, move scratchpad
+# assign     [class="TelegramDesktop"]              $wsB
+# assign     [class="Slack"]                        $wsC
+# for_window [title="IPython: .*"]                  mark $sp2, move scratchpad
+# for_window [title="^htop$"]                       mark $sp4, move scratchpad
 
 ################################### STARTUP ###################################
 
