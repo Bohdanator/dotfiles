@@ -21,7 +21,6 @@ GitHub.copilot-nightly
 GitHub.remotehub
 GitHub.vscode-pull-request-github
 GitLab.gitlab-workflow
-golang.go
 hashicorp.terraform
 haskell.haskell
 humao.rest-client
