@@ -8,7 +8,7 @@ alsa-utils
 arc-gtk-theme
 atool
 audacity
-awesome-terminal-fonts  
+awesome-terminal-fonts
 bc
 blender
 blueman
@@ -175,13 +175,13 @@ qt5ct
 ranger
 reflector
 ristretto
-rofi
 rsync
 rustup
 sagemath
 screen
 screenfetch
 scrot
+seahorse
 shotcut
 smartmontools
 smbclient
@@ -260,8 +260,8 @@ xf86-video-intel
 xf86-video-nouveau
 xf86-video-vesa
 xfburn
-xfce4-power-manager
 xfconf
+xorg
 xournalpp
 yarn
 zip

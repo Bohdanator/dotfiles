@@ -6,8 +6,8 @@ minizinc-ide
 nvm
 or-tools
 samsung-unified-driver-printer
-slack-electron
-stellarium-bin
+slack-desktop-wayland
+stellarium
 texlive-latexindent-meta
 tlpui
 visual-studio-code-bin

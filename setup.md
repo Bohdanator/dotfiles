@@ -94,18 +94,17 @@ This guide assumes an installation of Windows 11 (on GPT & UEFI) on the same dis
    1. check that your Windows system works as expected
    1. turn off hibernation and fast startup
    1. configure Windows to store time in UTC - run this in Administrator Command Prompt: `reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f`
+1. run `ssh-keygen -t ed25519` and `ssh-copy-id` the public key to all relevant SSH servers
 1. set your wallpaper by creating an image file/symlink `~/wallpaper`
-1. run `ssh-keygen` and `ssh-copy-id` the public key to all relevant SSH servers
 1. visit `http://localhost:631` and install your printers
 1. go through app settings
    - don't forget to check TLP settings
    - When setting up Firefox:
      - set `media.ffmpeg.vaapi.enabled=true` in `about:config` to enable hardware accelereation
      - I recommend using the uBlock Origin extension and adding these filter lists:
-     - `Fanboy’s Annoyance`
-     - `uBlock filters – Annoyances`
-     - `CZE, SVK: EasyList Czech and Slovak`
-     - `EasyList – Cookie Notices`
+       - `uBlock filters – Annoyances`
+       - `EasyList – Annoyances`
+       - `CZE, SVK: EasyList Czech and Slovak`
 1. test everything thoroughly (eg. sound/headphones/microphone, bluetooth, media keys, online screen
    sharing, ...)
 

@@ -21,6 +21,7 @@ GitHub.copilot-nightly
 GitHub.remotehub
 GitHub.vscode-pull-request-github
 GitLab.gitlab-workflow
+golang.go
 hashicorp.terraform
 haskell.haskell
 humao.rest-client
@@ -36,6 +37,7 @@ ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-vscode-remote.remote-containers
 ms-vscode.cpptools-extension-pack
 ms-vscode.hexeditor
 ms-vsliveshare.vsliveshare
