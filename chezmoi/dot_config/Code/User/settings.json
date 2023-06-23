@@ -1,7 +1,7 @@
 {
     // GENERAL
     "telemetry.telemetryLevel": "off",
-    // "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Default Dark Modern",
     "window.menuBarVisibility": "toggle",
     // "window.titleBarStyle": "custom",
     "extensions.ignoreRecommendations": false,
