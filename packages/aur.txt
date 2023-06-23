@@ -1,5 +1,5 @@
 clipman
-conan
+conan1
 gdmap
 hunspell-sk
 minizinc-ide

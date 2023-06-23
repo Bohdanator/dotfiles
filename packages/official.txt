@@ -78,6 +78,7 @@ hunspell-en_us
 hwinfo
 imagemagick
 inkscape
+inotify-tools
 intel-gpu-tools
 intel-media-driver
 inxi
@@ -201,6 +202,9 @@ telegram-desktop
 termdown
 terminus-font
 texlive
+texlive-binextra
+texlive-langenglish
+texlive-langczechslovak
 thermald
 thunar
 thunar-archive-plugin
