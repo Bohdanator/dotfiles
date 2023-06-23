@@ -157,6 +157,7 @@ pyenv
 python
 python-beautifulsoup4
 python-black
+python-i3ipc
 python-matplotlib
 python-networkx
 python-numpy
@@ -203,8 +204,8 @@ termdown
 terminus-font
 texlive
 texlive-binextra
-texlive-langenglish
 texlive-langczechslovak
+texlive-langenglish
 thermald
 thunar
 thunar-archive-plugin

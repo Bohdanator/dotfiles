@@ -91,6 +91,7 @@ bindsym Ctrl+Print           exec --no-startup-id flameshot gui
 bindsym $mod+Return          exec --no-startup-id lxterminal
 bindsym $mod+Shift+Return    exec --no-startup-id lxterminal -e ipython
 bindsym $mod+BackSpace       exec --no-startup-id lxterminal -e htop
+bindsym $mod+Shift+BackSpace exec --no-startup-id ~/.scripts/start-apps.sh
 bindsym $mod+x               exec firefox
 bindsym $mod+d               exec thunar
 bindsym $mod+c               exec code
@@ -324,11 +325,6 @@ for_window [app_id="^pavucontrol$"]                         floating enable, res
 for_window [app_id="^nm-connection-editor$"]                floating enable, resize set 800px 600px
 for_window [app_id="^blueman-manager$"]                     floating enable, resize set 800px 600px
 for_window [app_id="^org.matplotlib.Matplotlib3$"]          floating enable
-
-# assign     [class="TelegramDesktop"]              $wsB
-# assign     [class="Slack"]                        $wsC
-# for_window [title="IPython: .*"]                  mark $sp2, move scratchpad
-# for_window [title="^htop$"]                       mark $sp4, move scratchpad
 
 ################################### STARTUP ###################################
 

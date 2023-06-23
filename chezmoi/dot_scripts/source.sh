@@ -3,6 +3,7 @@ export SCRIPTSDIR="$HOME/.scripts"
 # OTHER SCRIPT FILES
 alias bat="$SCRIPTSDIR/battery.sh"
 alias thm="$SCRIPTSDIR/theme.sh"
+alias toolwait="$SCRIPTSDIR/toolwait.py"
 [[ -r "$SCRIPTSDIR/remote.sh" ]] && source "$SCRIPTSDIR/remote.sh"
 
 # UTILS
