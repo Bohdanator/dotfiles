@@ -16,3 +16,4 @@ trezor-bridge-bin
 visual-studio-code-bin
 yay-bin
 zotero-bin
+zsh-nix-shell
