@@ -128,6 +128,8 @@ esac
 
 [[ -r ~/.scripts/source.sh ]] && source ~/.scripts/source.sh
 
+eval "$(dircolors)"
+
 [[ -r /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
 eval "$(pyenv init -)"
