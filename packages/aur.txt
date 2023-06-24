@@ -2,6 +2,8 @@ clipman
 conan1
 gdmap
 hunspell-sk
+ledger-live-bin
+ledger-udev
 minizinc-ide
 nvm
 or-tools
@@ -10,6 +12,7 @@ slack-desktop-wayland
 stellarium
 texlive-latexindent-meta
 tlpui
+trezor-bridge-bin
 visual-studio-code-bin
 yay-bin
 zotero-bin
