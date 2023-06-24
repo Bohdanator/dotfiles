@@ -169,7 +169,7 @@
     // PROJECT MANAGER
     "projectManager.git.baseFolders": [
         "~/Documents",
-        "~/dotfiles",
+        "~/Work",
     ],
     "projectManager.git.maxDepthRecursion": 1,
 

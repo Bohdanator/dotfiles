@@ -1,5 +1,7 @@
 #!/bin/bash
 
+notify-send "Starting apps..."
+
 ~/.scripts/toolwait.py -m scratch0 -- lxterminal
 swaymsg 'move scratchpad'
 

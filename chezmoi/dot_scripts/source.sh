@@ -15,6 +15,7 @@ alias cz="chezmoi"
 alias reload="cz apply && sudo rsync -rv ~/.root-src/ / && swaymsg reload"
 alias grubupdate="grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB && grub-mkconfig -o /boot/grub/grub.cfg"
 alias c="code"
+alias XW="GDK_BACKEND=x11 SDL_VIDEODRIVER=x11 QT_QPA_PLATFORM=xcb"
 
 hotspot() {
     sudo rm /tmp/create_ap.all.lock

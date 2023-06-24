@@ -137,6 +137,7 @@ ntp
 numlockx
 nvidia
 nvidia-prime
+nvidia-utils
 nvtop
 openssh
 p7zip
@@ -169,6 +170,7 @@ python-pandas
 python-pillow
 python-pip
 python-pipenv
+python-pipx
 python-poetry
 python-pre-commit
 python-pygame
@@ -271,6 +273,7 @@ xf86-video-vesa
 xfburn
 xfconf
 xorg
+xorg-server
 xournalpp
 yarn
 zip
