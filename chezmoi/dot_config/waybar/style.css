@@ -80,6 +80,7 @@ window#waybar {
 
 #language {
     padding-right: 0;
+    min-width: 26px; /* a hack to avoid ellipis; empiric value */
 }
 
 #tray {
