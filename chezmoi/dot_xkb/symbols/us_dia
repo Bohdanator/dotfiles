@@ -1,4 +1,5 @@
 xkb_symbols "us_dia" {
     include "us"
-    key <LSGT> { [ dead_acute, dead_caron ] };
+    key <CAPS> { [ dead_acute, dead_caron ] };
+    key <LSGT> { [ dead_diaeresis, dead_circumflex ] };
 };
