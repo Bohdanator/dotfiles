@@ -4,6 +4,7 @@ gdmap
 hunspell-sk
 ledger-live-bin
 ledger-udev
+microsoft-edge-stable-bin
 minizinc-ide
 nvm
 or-tools

@@ -17,7 +17,7 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
 gabrielkerekes.cbor
-GitHub.copilot-nightly
+GitHub.copilot
 GitHub.remotehub
 GitHub.vscode-pull-request-github
 GitLab.gitlab-workflow
