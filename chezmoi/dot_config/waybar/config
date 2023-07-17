@@ -16,6 +16,7 @@
         "network",
         "clock",
         "sway/language",
+        "idle_inhibitor",
         "tray"
     ],
     "sway/workspaces": {
@@ -84,6 +85,13 @@
     "sway/language": {
         "format": "{flag} ",
         "tooltip-format": "{long}"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
     },
     "tray": {
         "show-passive-items": true,
