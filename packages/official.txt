@@ -36,6 +36,7 @@ docker
 docker-compose
 dosfstools
 dunst
+eog
 eslint
 evince
 figlet
