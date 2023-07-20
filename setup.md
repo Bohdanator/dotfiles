@@ -6,7 +6,7 @@ Tip: there is no scrollback on tty. You can use `screen` or `tee` to preserve th
 
 This part follows the [official installation guide](https://wiki.archlinux.org/index.php/Installation_guide), consult it in case of doubt.
 
-This guide assumes an installation of Windows 11 (on GPT & UEFI) on the same disk and results in a working dual-boot system (though youmind need to toggle Secure Boot when switching the OS).
+This guide assumes an installation of Windows 11 (on GPT & UEFI) on the same disk and results in a working dual-boot system (though you might need to toggle Secure Boot when switching the OS).
 
 1. acquire an installation image, prepare an installation medium and boot the live environment
 1. verify the boot mode by running `ls /sys/firmware/efi/efivars` (should print something without an error)
