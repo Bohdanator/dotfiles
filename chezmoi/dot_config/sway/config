@@ -20,7 +20,7 @@ mouse_warping                 none
 workspace_auto_back_and_forth yes
 for_window [title="."]        title_format "<b>%title</b> (%app_id)"
 
-font pango:Noto Sans 10
+font pango:FiraCode Nerd Font 10
 
 # class                 border  bground text    indicator child_border
 client.focused          #729FCF #3465A4 #FFFFFF #3465A4   #3465A4
