@@ -15,6 +15,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.emptySelectionClipboard": false,
     "editor.acceptSuggestionOnEnter": "off",
+    "editor.inlineSuggest.enabled": true,
 
     // EDITOR APPEARANCE
     "editor.scrollBeyondLastLine": false,
@@ -58,7 +59,6 @@
     "workbench.tree.indent": 16,
     "explorer.autoReveal": false,
     "explorer.compactFolders": false,
-    "explorer.openEditors.visible": 0,
 
     // CODE RUNNER
     "code-runner.fileDirectoryAsCwd": true,
@@ -87,7 +87,6 @@
     "gitlab.showPipelineUpdateNotifications": true,
     "github.gitProtocol": "ssh",
     "githubPullRequests.pullBranch": "never",
-    // "diffEditor.diffAlgorithm": "experimental",
 
     // LATEX
     "latex-workshop.view.pdf.viewer": "tab",
@@ -182,7 +181,6 @@
     },
 
     // OTHER
-    "editor.inlineSuggest.enabled": true,
 
 
 }
