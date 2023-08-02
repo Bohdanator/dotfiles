@@ -80,6 +80,7 @@ htop
 hunspell
 hunspell-en_us
 hwinfo
+i7z
 imagemagick
 inkscape
 inotify-tools
