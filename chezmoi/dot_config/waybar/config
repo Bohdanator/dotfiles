@@ -79,7 +79,7 @@
     },
     "clock": {
         "interval": 1,
-        "format": "{:%a %d. %m. <b>%H:%M:%S</b>}",
+        "format": "{:%a %d. %m. <b>%H:%M:%OS</b>}",
         "tooltip-format": "<tt>{calendar}</tt>"
     },
     "sway/language": {
