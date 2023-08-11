@@ -164,6 +164,7 @@ pyenv
 python
 python-beautifulsoup4
 python-black
+python-dotenv
 python-i3ipc
 python-matplotlib
 python-networkx

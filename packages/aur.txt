@@ -8,6 +8,7 @@ microsoft-edge-stable-bin
 minizinc-ide
 nvm
 or-tools
+python-openai
 samsung-unified-driver-printer
 slack-desktop-wayland
 stellarium
