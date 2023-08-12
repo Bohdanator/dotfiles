@@ -138,10 +138,10 @@ alias gssl='git stash list'
 alias gsss='git stash show'
 alias gssst='git stash show --text'
 alias gssa='git stash apply'
-alias gstd='git stash drop'
-alias gsto='git stash pop'
+alias gssd='git stash drop'
+alias gsso='git stash pop'
 
-alias goo='git status'
+alias gst='git status'
 
 alias gsm='git submodule'
 alias gsmu='git submodule update'
