@@ -19,6 +19,7 @@ swaymsg 'workspace --no-auto-back-and-forth "1:1 󰈹 "'
 
 swaymsg 'workspace --no-auto-back-and-forth "3:3 󰨞 "'
 ~/.scripts/toolwait.py -w code-url-handler -- code
+sleep 1
 
 swaymsg 'workspace --no-auto-back-and-forth "11:-  "'
 ~/.scripts/toolwait.py -w org.telegram.desktop -- bash -c 'telegram-desktop &'
