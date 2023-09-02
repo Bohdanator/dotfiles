@@ -1,9 +1,16 @@
 [user]
     name = {{ .name }}
     email = {{ .personal_email }}
+    signingkey = ~/.ssh/id_ed25519
 
 [pull]
     ff = only
+
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = ssh
 
 [color]
     ui = auto
