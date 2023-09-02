@@ -32,6 +32,7 @@ cups
 cups-pdf
 cups-pk-helper
 curl
+dpkg
 docker
 docker-compose
 dosfstools
