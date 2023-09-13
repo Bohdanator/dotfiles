@@ -195,6 +195,7 @@ screenfetch
 scrot
 seahorse
 shotcut
+signal-desktop
 smartmontools
 smbclient
 sof-firmware
