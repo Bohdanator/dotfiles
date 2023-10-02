@@ -27,7 +27,7 @@ cowsay
 cppcheck
 cpupower
 cronie
-cryptominisat5
+cryptominisat
 cups
 cups-pdf
 cups-pk-helper
@@ -161,6 +161,7 @@ pkgstats
 polkit-gnome
 potrace
 powertop
+pre-commit
 pyenv
 python
 python-beautifulsoup4
@@ -176,7 +177,6 @@ python-pip
 python-pipenv
 python-pipx
 python-poetry
-python-pre-commit
 python-pygame
 python-pylint
 python-scikit-learn
@@ -184,6 +184,7 @@ python-scipy
 python-sympy
 python-virtualenv
 qt5ct
+r
 ranger
 reflector
 ristretto
@@ -199,7 +200,7 @@ signal-desktop
 smartmontools
 smbclient
 sof-firmware
-solid
+solid5
 sox
 speedtest-cli
 splix
