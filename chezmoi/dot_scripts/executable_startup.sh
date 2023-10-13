@@ -5,7 +5,7 @@ blueman-applet &
 nm-applet --indicator &
 wl-paste --watch clipman store --no-persist &
 
-~/.scripts/theme.sh d
+~/.scripts/light-theme.sh 0
 gsettings set org.gnome.desktop.interface font-name 'Noto Sans 10'
 
 systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
