@@ -3,10 +3,10 @@
     "telemetry.telemetryLevel": "off",
     "workbench.colorTheme": "Default Dark Modern",
     "window.menuBarVisibility": "toggle",
-    // "window.titleBarStyle": "custom",
+    "window.titleBarStyle": "custom",
     "extensions.ignoreRecommendations": false,
     "terminal.integrated.allowChords": false,  // pass e.g. Ctrl+K to the terminal
-    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.scrollback": 30000,
 
     // EDITING
     "files.insertFinalNewline": true,
@@ -179,6 +179,7 @@
         "plaintext": true,
         "markdown": true,
     },
+    "workbench.editor.empty.hint": "hidden",
 
     // OTHER
 
