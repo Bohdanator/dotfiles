@@ -16,6 +16,7 @@ bc
 blender
 blueman
 bluez-utils
+boost
 brightnessctl
 chezmoi
 chromium
@@ -32,10 +33,10 @@ cups
 cups-pdf
 cups-pk-helper
 curl
-dpkg
 docker
 docker-compose
 dosfstools
+dpkg
 dunst
 eog
 eslint
@@ -150,6 +151,8 @@ papirus-icon-theme
 parted
 pavucontrol
 pdftk
+perl-file-homedir
+perl-yaml-tiny
 pgpdump
 pinta
 pipewire
@@ -158,6 +161,7 @@ pipewire-audio
 pipewire-pulse
 pkgfile
 pkgstats
+plantri
 polkit-gnome
 potrace
 powertop

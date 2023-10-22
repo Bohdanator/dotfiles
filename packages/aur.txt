@@ -4,7 +4,6 @@ gdmap
 hunspell-sk
 ledger-live-bin
 ledger-udev
-microsoft-edge-stable-bin
 minizinc-ide
 nvm
 or-tools
@@ -12,7 +11,6 @@ python-openai
 samsung-unified-driver-printer
 slack-desktop-wayland
 stellarium
-texlive-latexindent-meta
 tlpui
 trezor-bridge-bin
 visual-studio-code-bin
