@@ -1,10 +1,10 @@
 export SCRIPTSDIR="$HOME/.scripts"
 
 # OTHER SCRIPT FILES
-alias bat="$SCRIPTSDIR/battery.sh"
-alias perf="$SCRIPTSDIR/performance.sh"
+alias battery="$SCRIPTSDIR/battery.sh"
+alias performance="$SCRIPTSDIR/performance.sh"
 alias screenshot="$SCRIPTSDIR/screenshot.sh"
-alias light="$SCRIPTSDIR/light-theme.sh"
+alias theme="$SCRIPTSDIR/theme.sh"
 alias toolwait="$SCRIPTSDIR/toolwait.py"
 [[ -r "$SCRIPTSDIR/remote.sh" ]] && source "$SCRIPTSDIR/remote.sh"
 
