@@ -83,9 +83,11 @@ bindsym $mod+Shift+s         sticky toggle
 bindsym $mod+Tab             exec --no-startup-id wofi
 
 # screnshots
-bindsym Print                exec --no-startup-id \
-                             "cd $HOME/Pictures; grim; notify-send 'screenshot captured'"
-bindsym Ctrl+Print           exec --no-startup-id flameshot gui
+bindsym Print                exec --no-startup-id ~/.scripts/screenshot.sh all
+bindsym shift+Print          exec --no-startup-id ~/.scripts/screenshot.sh screen edit
+bindsym $mod+Print           exec --no-startup-id ~/.scripts/screenshot.sh window edit
+bindsym Ctrl+Print           exec --no-startup-id ~/.scripts/screenshot.sh select edit
+bindsym Mod1+Print           exec --no-startup-id ~/.scripts/screenshot.sh edit
 
 # app shortcuts
 bindsym $mod+Return          exec --no-startup-id lxterminal
@@ -326,6 +328,7 @@ for_window [app_id="^pavucontrol$"]                         floating enable, res
 for_window [app_id="^nm-connection-editor$"]                floating enable, resize set 800px 600px
 for_window [app_id="^blueman-manager$"]                     floating enable, resize set 800px 600px
 for_window [app_id="^org.matplotlib.Matplotlib3$"]          floating enable
+for_window [app_id="^com.gabm.satty$"]                      floating enable
 for_window [title="^Figure [0-9]+$"]                        floating enable
 for_window [title="^File Operation Progress$"]              floating enable
 for_window [title="^Firefox — Sharing Indicator$"]          floating enable, kill

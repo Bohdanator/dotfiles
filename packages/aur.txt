@@ -9,6 +9,7 @@ nvm
 or-tools
 python-openai
 samsung-unified-driver-printer
+satty-bin
 slack-desktop-wayland
 stellarium
 tlpui

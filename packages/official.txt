@@ -44,7 +44,6 @@ evince
 figlet
 firefox
 flake8
-flameshot
 fontconfig
 foomatic-db
 foomatic-db-engine
@@ -201,6 +200,7 @@ scrot
 seahorse
 shotcut
 signal-desktop
+slurp
 smartmontools
 smbclient
 sof-firmware
