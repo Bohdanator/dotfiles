@@ -117,6 +117,7 @@ lxappearance-gtk3
 lxterminal
 lz4
 lzop
+magic-wormhole
 man-db
 man-pages
 mesa
