@@ -33,7 +33,6 @@
     "editor.rulers": [100],
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.colors": true,
-    "workbench.editor.untitled.hint": "hidden",
 
     // TERMINAL APPEARANCE
     "terminal.integrated.cursorStyle": "block",
