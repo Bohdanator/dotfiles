@@ -13,6 +13,7 @@
         "backlight",
         "battery",
         "cpu",
+        "memory",
         "network",
         "clock",
         "sway/language",
@@ -66,7 +67,12 @@
     },
     "cpu": {
         "interval": 1,
-        "format": "  {usage:02}%",
+        "format": "  {usage:02}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 1,
+        "format": "  {percentage:02}%",
         "tooltip": false
     },
     "network": {
