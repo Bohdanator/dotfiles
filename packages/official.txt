@@ -13,6 +13,7 @@ atool
 audacity
 awesome-terminal-fonts
 bc
+bind
 blender
 blueman
 bluez-utils
