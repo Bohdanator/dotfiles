@@ -95,6 +95,7 @@ jpegoptim
 jq
 jupyter-notebook
 jupyterlab
+kcachegrind
 krita
 kvantum
 less
