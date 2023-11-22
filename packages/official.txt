@@ -25,6 +25,7 @@ clang
 cloc
 cmake
 cmatrix
+coin-or-cbc
 cowsay
 cppcheck
 cpupower
@@ -256,6 +257,8 @@ vdpauinfo
 veracrypt
 vi
 vim
+virtualbox
+virtualbox-host-modules-arch
 vlc
 vulkan-icd-loader
 vulkan-intel
