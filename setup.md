@@ -87,6 +87,7 @@ This guide assumes an installation of Windows 11 (on GPT & UEFI) on the same dis
    1. `nix-channel --add https://nixos.org/channels/nixpkgs-unstable && nix-channel --update`
    1. `cat packages/vscode.txt | xargs -otn 1 code --install-extension`
    1. `ln -s /usr/share/hunspell/* ~/.config/Code/Dictionaries`
+   1. `gh extension install github/gh-copilot`
 1. disable unsuccessful login delay by adding `nodelay` to the end of the `auth [success=1 default=bad] pam_unix.so try_first_pass nullok` line in `/etc/pam.d/system-auth`
 1. reboot
 
