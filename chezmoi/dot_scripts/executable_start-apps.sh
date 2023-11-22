@@ -25,4 +25,4 @@ swaymsg 'workspace --no-auto-back-and-forth "11:-  "'
 ~/.scripts/toolwait.py -w org.telegram.desktop -- bash -c 'telegram-desktop &'
 
 swaymsg 'workspace --no-auto-back-and-forth "12:= 󰒱 "'
-~/.scripts/toolwait.py -w Slack -- slack --enable-features=UseOzonePlatform --enable-features=WebRTCPipeWireCapturer --enable-features=WaylandWindowDecorations --ozone-platform=wayland
+~/.scripts/toolwait.py -w Slack -- slack --ozone-platform-hint=auto

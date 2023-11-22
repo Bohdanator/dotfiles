@@ -10,7 +10,7 @@ or-tools
 python-openai
 samsung-unified-driver-printer
 satty-bin
-slack-desktop-wayland
+slack-desktop
 stellarium
 tlpui
 trezor-bridge-bin
