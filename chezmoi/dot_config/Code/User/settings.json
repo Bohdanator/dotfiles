@@ -71,9 +71,12 @@
     "spellright.configurationScope": "user",
     "spellright.notificationClass": "information",
     "spellright.language": [
+        "en_US",
         "sk_SK"
     ],
-    "spellright.documentTypes": [],
+    "spellright.documentTypes": [
+        "markdown"
+    ],
     // "grammarly.domain": "academic",
     "grammarly.hideUnavailablePremiumAlerts": true,
 
