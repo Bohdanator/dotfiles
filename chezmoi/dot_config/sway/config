@@ -20,7 +20,7 @@ mouse_warping                 none
 workspace_auto_back_and_forth yes
 for_window [title="."]        title_format "<b>%title</b> (%app_id)"
 
-font pango:FiraCode Nerd Font 10
+font pango:MonaspiceNe Nerd Font Propo 10
 
 # class                 border  bground text    indicator child_border
 client.focused          #729FCF #3465A4 #FFFFFF #3465A4   #3465A4
@@ -310,18 +310,18 @@ bindsym $mod+Shift+b         move container to workspace back_and_forth; workspa
 # move to a scratchpad / view a scratchpad
 # the weird dimension values are due to lxterminal having a little gaps when using round dimensions
 bindsym $mod+Shift+p            mark      $sp0, move scratchpad
-bindsym $mod+p                  [con_mark=$sp0] scratchpad show, move position center, resize set 1197px 899px
+bindsym $mod+p                  [con_mark=$sp0] scratchpad show, move position center, resize set 1197px 888px
 bindsym $mod+Shift+bracketleft  mark      $sp1, move scratchpad
-bindsym $mod+bracketleft        [con_mark=$sp1] scratchpad show, move position center, resize set 1197px 899px
+bindsym $mod+bracketleft        [con_mark=$sp1] scratchpad show, move position center, resize set 1197px 888px
 bindsym $mod+Shift+bracketright mark      $sp2, move scratchpad
-bindsym $mod+bracketright       [con_mark=$sp2] scratchpad show, move position center, resize set 1197px 899px
+bindsym $mod+bracketright       [con_mark=$sp2] scratchpad show, move position center, resize set 1197px 888px
 bindsym $mod+Shift+apostrophe   mark      $sp3, move scratchpad
-bindsym $mod+apostrophe         [con_mark=$sp3] scratchpad show, move position center, resize set 1197px 899px
+bindsym $mod+apostrophe         [con_mark=$sp3] scratchpad show, move position center, resize set 1197px 888px
 bindsym $mod+Shift+backslash    mark      $sp4, move scratchpad
-bindsym $mod+backslash          [con_mark=$sp4] scratchpad show, move position center, resize set 1197px 899px
+bindsym $mod+backslash          [con_mark=$sp4] scratchpad show, move position center, resize set 1197px 888px
 
 bindsym $mod+Shift+slash                        move scratchpad
-bindsym $mod+slash                              scratchpad show, move position center, resize set 1197px 899px
+bindsym $mod+slash                              scratchpad show, move position center, resize set 1197px 888px
 
 # move the focused workspace to an output
 bindsym $mod+Ctrl+Up            move workspace to output up

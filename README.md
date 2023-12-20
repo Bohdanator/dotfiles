@@ -14,6 +14,6 @@ My Linux configuration files. Features:
 - Color palette: **Tango**
 - Qt and GTK theme: **Arc Dark**
 - Icon theme: **Papirus Dark**
-- System fonts: **Fira Code** and **Noto Sans**
+- System fonts: **GitHub Monaspace Nerd Font** and **Noto Sans**
 
 Details in the [setup guide](./setup.md) 🚀

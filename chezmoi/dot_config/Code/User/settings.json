@@ -22,8 +22,10 @@
     "editor.wordWrap": "on",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorBlinking": "smooth",
-    "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', 'Noto Mono', Consolas, monospace",
-    "editor.fontLigatures": true,
+    // "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', 'Noto Mono', Consolas, monospace",
+    "editor.fontFamily": "MonaspiceNe Nerd Font Propo",
+    // "editor.fontLigatures": true,
+    "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08'",
     "disableLigatures.mode": "Cursor",
     "editor.renderWhitespace": "all",
     "editor.minimap.showSlider": "always",
@@ -38,7 +40,9 @@
     "terminal.integrated.cursorStyle": "block",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.enableBell": true,
-    "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Fira Code', 'Noto Mono', Consolas, monospace",
+    // "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Fira Code', 'Noto Mono', Consolas, monospace",
+    "terminal.integrated.fontFamily": "MonaspiceNe Nerd Font Propo",
+    // TODO
     "workbench.colorCustomizations": {
         "terminal.ansiBlack":   "#2E3436",  "terminal.ansiBrightBlack":   "#555753",
         "terminal.ansiRed":     "#CC0000",  "terminal.ansiBrightRed":     "#EF2929",

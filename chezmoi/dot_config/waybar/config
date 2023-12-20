@@ -29,7 +29,7 @@
     },
     "sway/scratchpad": {
         "format": "{icon} {count}",
-        "format-icons": [" ", " "],
+        "format-icons": [" ", " "],
         "show-empty": true,
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
@@ -67,20 +67,20 @@
     },
     "cpu": {
         "interval": 1,
-        "format": "  {usage:02}%",
+        "format": " {usage:02}%",
         "tooltip": false
     },
     "memory": {
         "interval": 1,
-        "format": "  {percentage:02}%",
+        "format": " {percentage:02}%",
         "tooltip": false
     },
     "network": {
         "interval": 5,
-        "format-disconnected": "󰌙  (disconnected)",
-        "format-linked": "󰌘  {ifname} (no IP)",
+        "format-disconnected": "󰌙 (disconnected)",
+        "format-linked": "󰌘 {ifname} (no IP)",
         "format-wifi": "{icon} {essid} {signalStrength}%",
-        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "tooltip-format": "{ifname}: {ipaddr}"
     },
     "clock": {
@@ -95,8 +95,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+            "activated": "",
+            "deactivated": ""
         }
     },
     "tray": {
