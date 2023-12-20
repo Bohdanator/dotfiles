@@ -146,7 +146,10 @@ nvidia
 nvidia-prime
 nvidia-utils
 nvtop
+obsidian
 openssh
+otf-monaspace
+otf-monaspace-nerd
 p7zip
 pacman-contrib
 pandoc-cli
@@ -175,6 +178,7 @@ python-beautifulsoup4
 python-black
 python-dotenv
 python-i3ipc
+python-ipympl
 python-matplotlib
 python-networkx
 python-numpy
@@ -246,6 +250,7 @@ ttf-firacode-nerd
 ttf-inconsolata
 ttf-liberation
 ttf-opensans
+typst
 ufw
 unarchiver
 unrar
