@@ -107,6 +107,11 @@
     // "python.linting.flake8Enabled": true,
     // "python.linting.mypyEnabled": true,
     "python.formatting.provider": "black",
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "jupyter.askForKernelRestart": false,
 
     // JAVA
     "java.semanticHighlighting.enabled": true,
