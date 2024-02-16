@@ -3,7 +3,7 @@
     "telemetry.telemetryLevel": "off",
     "workbench.colorTheme": "Default Dark Modern",
     "window.menuBarVisibility": "toggle",
-    "window.titleBarStyle": "custom",
+    "window.titleBarStyle": "native",
     "extensions.ignoreRecommendations": false,
     "terminal.integrated.allowChords": false,  // pass e.g. Ctrl+K to the terminal
     "terminal.integrated.scrollback": 30000,
@@ -54,7 +54,7 @@
         "terminal.ansiWhite":   "#D3D7Cf",  "terminal.ansiBrightWhite":   "#EEEEEC",
     },
     "terminal.integrated.minimumContrastRatio": 1,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
 
     // EXPLORER APPEARANCE
     "workbench.iconTheme": "material-icon-theme",
@@ -82,7 +82,6 @@
         "markdown"
     ],
     // "grammarly.domain": "academic",
-    "grammarly.hideUnavailablePremiumAlerts": true,
 
     // GIT
     "scm.repositories.sortOrder": "path",
@@ -106,11 +105,6 @@
 
     // PYTHON
     "python.terminal.executeInFileDir": true,
-    // "python.linting.enabled": true,
-    // "python.linting.pylintEnabled": true,
-    // "python.linting.flake8Enabled": true,
-    // "python.linting.mypyEnabled": true,
-    "python.formatting.provider": "black",
     "jupyter.widgetScriptSources": [
         "jsdelivr.com",
         "unpkg.com"
@@ -118,7 +112,6 @@
     "jupyter.askForKernelRestart": false,
 
     // JAVA
-    "java.semanticHighlighting.enabled": true,
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "/usr/lib/jvm/java-11-openjdk/lib/fx/*.jar",
@@ -155,7 +148,6 @@
     "task.problemMatchers.neverPrompt": {
         "shell": true
     },
-    "taskExplorer.pathToMake": "make",
 
     // LINE COUNTER
     "LineCount.excludes": [
