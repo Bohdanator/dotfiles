@@ -155,7 +155,7 @@ mode "resize" {
 
 ################################### OUTPUTS ####################################
 
-output eDP-1 scale 1.5
+output eDP-1 scale 1
 output "*" bg ~/wallpaper fill
 
 # 3072x1920 - eDP-1 at scale 1

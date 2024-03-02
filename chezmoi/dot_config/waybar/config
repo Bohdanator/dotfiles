@@ -1,6 +1,6 @@
 {
     "position": "bottom",
-    "height": 30,
+    "height": 20,
     "spacing": 0,
     "modules-left": [
         "sway/workspaces",
