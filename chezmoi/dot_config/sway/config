@@ -8,7 +8,7 @@ set $mod Mod4
 
 bar swaybar_command waybar
 
-gaps inner 10
+gaps inner 5
 smart_gaps on
 
 default_border                pixel 2
@@ -204,12 +204,12 @@ set $ws1 "1:1 󰈹 "
 set $ws2 "2:2 󰈹 "
 set $ws3 "3:3 󰨞 "
 set $ws4 "4:4 󰨞 "
-set $ws5 "5:5 󰨞 "
-set $ws6 "6:6 󰨞 "
-set $ws7 "7:7 󰨞 "
+set $ws5 "5:5  "
+set $ws6 "6:6  "
+set $ws7 "7:7   "
 set $ws8 "8:8   "
 set $ws9 "9:9   "
-set $wsA "10:0   "
+set $wsA "10:0  "
 set $wsB "11:-  "
 set $wsC "12:= 󰒱 "
 

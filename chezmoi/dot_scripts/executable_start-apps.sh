@@ -20,6 +20,9 @@ swaymsg 'workspace --no-auto-back-and-forth "2:2 󰈹 "'
 
 ~/.scripts/start-code.sh
 
+swaymsg 'workspace --no-auto-back-and-forth "10:0  "'
+~/.scripts/toolwait.py spotify-launcher
+
 swaymsg 'workspace --no-auto-back-and-forth "11:-  "'
 ~/.scripts/toolwait.py -w org.telegram.desktop -- bash -c 'telegram-desktop &'
 
