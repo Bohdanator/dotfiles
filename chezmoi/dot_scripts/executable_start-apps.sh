@@ -24,7 +24,7 @@ swaymsg 'workspace --no-auto-back-and-forth "10:0  "'
 ~/.scripts/toolwait.py spotify-launcher
 
 swaymsg 'workspace --no-auto-back-and-forth "11:-  "'
-~/.scripts/toolwait.py -w org.telegram.desktop -- bash -c 'telegram-desktop &'
+~/.scripts/toolwait.py -w org.telegram.desktop -- telegram-desktop
 
 swaymsg 'workspace --no-auto-back-and-forth "12:= 󰒱 "'
 ~/.scripts/toolwait.py -w Slack -- slack --ozone-platform-hint=auto
