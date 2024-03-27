@@ -18,3 +18,4 @@ visual-studio-code-bin
 yay-bin
 zotero-bin
 zsh-nix-shell
+zsh-theme-powerlevel10k
