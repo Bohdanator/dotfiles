@@ -39,7 +39,10 @@
     // TERMINAL APPEARANCE
     "terminal.integrated.cursorStyle": "block",
     "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.enableBell": true,
+    "terminal.integrated.enableVisualBell": true,
+    "accessibility.signals.terminalBell": {
+        "sound": "on"
+    },
     // "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Fira Code', 'Noto Mono', Consolas, monospace",
     "terminal.integrated.fontFamily": "MonaspiceNe Nerd Font Propo",
     // TODO
@@ -55,6 +58,10 @@
     },
     "terminal.integrated.minimumContrastRatio": 1,
     "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.commandsToSkipShell": [
+        "github.copilot.terminal.suggestCommand",
+        "language-julia.interrupt"
+    ],
 
     // EXPLORER APPEARANCE
     "workbench.iconTheme": "material-icon-theme",
@@ -75,13 +82,12 @@
     "spellright.configurationScope": "user",
     "spellright.notificationClass": "information",
     "spellright.language": [
-        "en_US",
         "sk_SK"
     ],
     "spellright.documentTypes": [
         "markdown"
     ],
-    // "grammarly.domain": "academic",
+    "grammarly.config.documentDomain": "academic",
 
     // GIT
     "scm.repositories.sortOrder": "path",
@@ -130,12 +136,21 @@
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
 
+    // JULIA
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+
     // JS
     "[vue]": {
         "editor.defaultFormatter": "octref.vetur"
     },
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+
+    // JSON
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
 
     // HEXEDITOR

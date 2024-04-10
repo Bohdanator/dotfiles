@@ -2,6 +2,7 @@ clipman
 conan1
 gdmap
 hunspell-sk
+julia-bin
 ledger-live-bin
 ledger-udev
 minizinc-ide
