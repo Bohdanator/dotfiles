@@ -30,3 +30,9 @@ if [ "$1" == "edit" ] || [ "$2" == "edit" ]; then
     OUTPUT=$(date '+%Y%m%d_%Hh%Mm%Ss')_satty.png
     satty -f "$INPUT" --output-filename "$OUTPUT"
 fi
+
+if [ "$1" == "record" ]; then
+    SELECTION=$(slurp -c '#ff0000ff')
+    OUTPUT=$(date '+%Y%m%d_%Hh%Mm%Ss')_wf-recorder.mp4
+    wf-recorder -f "$OUTPUT" -g " $SELECTION"
+fi

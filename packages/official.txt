@@ -271,6 +271,7 @@ vulkan-radeon
 vulkan-tools
 waybar
 waylock
+wf-recorder
 wget
 wireplumber
 wireshark-qt
