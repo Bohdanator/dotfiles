@@ -81,12 +81,8 @@
     // SPELLING
     "spellright.configurationScope": "user",
     "spellright.notificationClass": "information",
-    "spellright.language": [
-        "sk_SK"
-    ],
-    "spellright.documentTypes": [
-        "markdown"
-    ],
+    "spellright.language": [],
+    "spellright.documentTypes": [],
     "grammarly.config.documentDomain": "academic",
 
     // GIT
