@@ -181,8 +181,8 @@ output "*" bg ~/wallpaper fill
 # 2800 >  ------------------            ------------------
 
 # defaults
-output HDMI-A-1 disable
 output eDP-1    enable pos 2560 1440
+output HDMI-A-1 enable pos 2304    0
 
 set $mode_display HDMI l(e)ft, HDMI r(i)ght, HDMI a(b)ove, (o)ff
 bindsym $mod+i mode "$mode_display"
