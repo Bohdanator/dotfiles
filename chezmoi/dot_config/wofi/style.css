@@ -1,16 +1,15 @@
-
 #window {
-    background-color: rgba(32, 32, 32, 0.95);
-    color: #F0F0F0;
-    border: 2px solid #3465A4;
-    font-family: "MonaspiceNe Nerd Font Propo";
+    background-color: --wofi-color0;
+    color: --wofi-color1;
+    border: 2px solid --wofi-color2;
+    font-family: "MonaspiceNe Nerd Font";
     font-size: 18px;
 }
 
 #input {
     background-color: transparent;
-    color: #F0F0F0;
-    border: 2px solid #3465A4;
+    color: --wofi-color1;
+    border: 2px solid --wofi-color2;
     border-radius: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -22,7 +21,7 @@
 }
 
 #entry:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: rgba(127, 127, 127, 0.08);
 }
 
 list {
@@ -34,7 +33,7 @@ expander {
 }
 
 #entry:selected {
-    background-color: #3465A4;
+    background-color: --wofi-color2;
     border: 0px;
     border-radius: 0px;
 }

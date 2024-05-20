@@ -303,8 +303,8 @@
 
 [urgency_low]
     background = "#303038"
-    foreground = "#868686"
-    highlight = "#868686"
+    foreground = "#888888"
+    highlight = "#888888"
     default_icon = "/usr/share/icons/Papirus-Dark/16x16/actions/dialog-information.svg"
 
 [urgency_normal]

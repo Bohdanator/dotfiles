@@ -23,10 +23,10 @@ for_window [title="."]        title_format "<b>%title</b> (%app_id)"
 font pango:MonaspiceNe Nerd Font 10
 
 # class                 border  bground text    indicator child_border
-client.focused          #729FCF #3465A4 #FFFFFF #3465A4   #3465A4
+client.focused          #729FCF #3465A4 #F0F0F0 #3465A4   #3465A4
 client.focused_inactive #333333 #333333 #888888 #3465A4   #333333
-client.unfocused        #5F676A #5F676A #FFFFFF #3465A4   #5F676A
-client.urgent           #2F343A #FCE94F #FFFFFF #3465A4   #FCE94F
+client.unfocused        #5F676A #5F676A #F0F0F0 #3465A4   #5F676A
+client.urgent           #202020 #FCE94F #F0F0F0 #3465A4   #FCE94F
 
 ##################################### INPUT ####################################
 

@@ -1,45 +1,56 @@
+@import "theme-dark.css";
+
 * {
-    color: #F0F0F0;
     font-family: "MonaspiceNe Nerd Font";
     font-size: 16px;
     transition-duration: 0.1s;
 }
 
 window#waybar {
-    background-color: rgb(48, 48, 56);
-    border: 1px solid rgb(54, 54, 63);
+    color: @my-text;
+    background-color: @my-background;
+    border: 1px solid @my-border;
 }
 
 #workspaces button {
-    background-color: rgb(54, 54, 63);
-    border: 1px solid rgb(72, 72, 84);
+    background-color: @my-buttons;
+    border: 1px solid @my-border;
     border-radius: 0;
     padding: 0 10px;
 }
 
 #workspaces button.visible {
-    background-color: #33455B;
-    border: 1px solid #729FCF;
+    color: @my-text-focused;
+    background-color: mix(@my-buttons, #3465A4, 0.6);
+    border: 1px solid mix(@my-border, #729FCF, 0.6);
 }
 
 #workspaces button.focused {
+    color: @my-text-focused;
     background-color: #3465A4;
     border: 1px solid #729FCF;
-    box-shadow: inset 0 -3px #F0F0F0, 0 3px #F0F0F0;
+    box-shadow: inset 0 -3px @my-text-focused, 0 3px @my-text-focused;
     border-bottom: transparent;
 }
 
 #workspaces button.urgent {
+    color: @my-text-focused;
     background-color: #C4A000;
     border: 1px solid #FCE94F;
 }
 
+#workspaces button.focused:hover {
+    box-shadow: inset 0 -3px @my-text-focused;
+    border-bottom: transparent;
+}
+
 #workspaces button:hover {
-    box-shadow: inset 0 -3px #F0F0F0;
+    box-shadow: inset 0 -3px @my-text;
     border-bottom: transparent;
 }
 
 #mode {
+    color: @my-text-focused;
     background-color: #06989A;
     border: 1px solid #34E2E2;
     padding: 0 10px;
@@ -57,7 +68,7 @@ window#waybar {
 #idle_inhibitor,
 #tray {
     padding: 0 14px;
-    border-left: 1px solid rgb(72, 72, 84);
+    border-left: 1px solid @my-border;
 }
 
 #pulseaudio.muted {
@@ -81,11 +92,13 @@ window#waybar {
 }
 
 #language {
+    background-color: @my-tray;
     padding-right: 0;
     min-width: 26px; /* a hack to avoid ellipis; empiric value */
 }
 
 #idle_inhibitor {
+    background-color: @my-tray;
     padding-left: 8px;
     padding-right: 8px;
     border-left: 0;
@@ -96,6 +109,7 @@ window#waybar {
 }
 
 #tray {
+    background-color: @my-tray;
     padding-left: 8px;
     border-left: 0;
 }
