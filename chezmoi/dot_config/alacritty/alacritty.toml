@@ -1,0 +1,50 @@
+import = [
+"~/.config/alacritty/theme-dark.toml",
+]
+
+[colors.normal]
+black = "#2E3436"
+red = "#CC0000"
+green = "#4E9A06"
+yellow = "#C4A000"
+blue = "#3465A4"
+magenta = "#75507B"
+cyan = "#06989A"
+white = "#D3D7CF"
+
+[colors.bright]
+black = "#555753"
+red = "#EF2929"
+green = "#8AE234"
+yellow = "#FCE94F"
+blue = "#729FCF"
+magenta = "#AD7FA8"
+cyan = "#34E2E2"
+white = "#EEEEEC"
+
+[font]
+size = 10
+
+[font.bold]
+family = "MonaspiceNe Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "MonaspiceNe Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "MonaspiceNe Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "MonaspiceNe Nerd Font"
+style = "Regular"
+
+[keyboard]
+bindings = [
+   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
+
+[scrolling]
+history = 30000

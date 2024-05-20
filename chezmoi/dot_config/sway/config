@@ -20,7 +20,7 @@ mouse_warping                 none
 workspace_auto_back_and_forth yes
 for_window [title="."]        title_format "<b>%title</b> (%app_id)"
 
-font pango:MonaspiceNe Nerd Font Propo 10
+font pango:MonaspiceNe Nerd Font 10
 
 # class                 border  bground text    indicator child_border
 client.focused          #729FCF #3465A4 #FFFFFF #3465A4   #3465A4
@@ -101,9 +101,9 @@ bindsym Ctrl+Print           exec --no-startup-id ~/.scripts/screenshot.sh selec
 bindsym Mod1+Print           exec --no-startup-id ~/.scripts/screenshot.sh edit
 
 # app shortcuts
-bindsym $mod+Return          exec --no-startup-id lxterminal
-bindsym $mod+Shift+Return    exec --no-startup-id lxterminal -e ipython
-bindsym $mod+BackSpace       exec --no-startup-id lxterminal -e htop
+bindsym $mod+Return          exec --no-startup-id alacritty
+bindsym $mod+Shift+Return    exec --no-startup-id alacritty -e ipython
+bindsym $mod+BackSpace       exec --no-startup-id alacritty -e htop
 bindsym $mod+Shift+BackSpace exec --no-startup-id ~/.scripts/start-apps.sh
 bindsym $mod+x               exec firefox
 bindsym $mod+d               exec thunar

@@ -1,15 +1,15 @@
 #!/bin/bash
 
-~/.scripts/toolwait.py -m scratch0 -- lxterminal
+~/.scripts/toolwait.py -w Alacritty -m scratch0 -- alacritty
 swaymsg 'move scratchpad'
 
-~/.scripts/toolwait.py -m scratch1 -- lxterminal
+~/.scripts/toolwait.py -w Alacritty -m scratch1 -- alacritty
 swaymsg 'move scratchpad'
 
-~/.scripts/toolwait.py -m scratch2 -- lxterminal -e ipython
+~/.scripts/toolwait.py -w Alacritty -m scratch2 -- alacritty -e ipython
 swaymsg 'move scratchpad'
 
-~/.scripts/toolwait.py -m scratch4 -- lxterminal -e htop
+~/.scripts/toolwait.py -w Alacritty -m scratch4 -- alacritty -e htop
 swaymsg 'move scratchpad'
 
 swaymsg 'workspace --no-auto-back-and-forth "1:1 󰈹 "'

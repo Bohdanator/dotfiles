@@ -10,7 +10,7 @@ My Linux configuration files. Features:
 - Menu: **Wofi**
 - Notifications: **Dunst**
 - File manager: **Thunar**
-- Terminal emulator: **LXTerminal**
+- Terminal emulator: **Alacritty**
 - Color palette: **Tango**
 - Qt and GTK theme: **Arc Dark**
 - Icon theme: **Papirus Dark**

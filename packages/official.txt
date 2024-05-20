@@ -2,6 +2,7 @@ aarch64-linux-gnu-gcc
 acpi
 acpid
 adobe-source-code-pro-fonts
+alacritty
 alsa-firmware
 alsa-plugins
 alsa-ucm-conf
