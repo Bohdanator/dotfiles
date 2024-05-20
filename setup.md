@@ -78,7 +78,7 @@ This guide assumes an installation of Windows 11 (on GPT & UEFI) on the same dis
    1. `cat packages/aur.txt | xargs -ot yay -Syu`
    1. `chezmoi init --apply -v -S ./chezmoi`
    1. `sudo usermod -aG docker,wireshark,nix-users $USER`
-   1. `sudo systemctl enable bluetooth cronie cups docker fstrim.timer greetd nix-daemon thermald tlp ufw`
+   1. `sudo systemctl enable bluetooth cronie cups docker fstrim.timer greetd nix-daemon pcscd thermald tlp ufw`
    1. `sudo ufw enable`
    1. `chsh -s /bin/zsh`
    1. copy files from `~/.root-src` where they belong (use `diff` to compare them with the system-provided files if they are present)

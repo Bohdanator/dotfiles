@@ -40,6 +40,7 @@ docker-compose
 dosfstools
 dpkg
 dunst
+dust
 eog
 eslint
 evince
@@ -147,6 +148,7 @@ nvidia-prime
 nvidia-utils
 nvtop
 obsidian
+ollama-cuda
 openssh
 otf-monaspace
 otf-monaspace-nerd
@@ -182,6 +184,7 @@ python-ipympl
 python-matplotlib
 python-networkx
 python-numpy
+python-openai
 python-pandas
 python-pillow
 python-pip

@@ -1,5 +1,6 @@
 clipman
 conan1
+eidklient
 gdmap
 hunspell-sk
 julia-bin
@@ -8,7 +9,6 @@ ledger-udev
 minizinc-ide
 nvm
 or-tools
-python-openai
 samsung-unified-driver-printer
 satty-bin
 slack-desktop
