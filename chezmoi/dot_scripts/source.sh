@@ -10,6 +10,7 @@ alias toolwait="$SCRIPTSDIR/toolwait.py"
 
 # UTILS
 alias mdtopdf="pandoc --highlight-style kate -V papersize:a4 -V geometry:margin=2.5cm -V urlcolor=blue -f gfm"
+alias pick_color='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:- | tail -n 1'
 alias busy="python -c 'while True: pass'"
 alias timer="termdown -f roman"
 alias ookla="speedtest --simple"
