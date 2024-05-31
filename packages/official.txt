@@ -32,6 +32,7 @@ cppcheck
 cpupower
 cronie
 cryptominisat
+cuda
 cups
 cups-pdf
 cups-pk-helper
