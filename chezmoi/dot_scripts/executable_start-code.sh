@@ -4,7 +4,7 @@ swaymsg 'workspace --no-auto-back-and-forth "3:3 󰨞 "'
 ~/.scripts/toolwait.py -w code-url-handler -- code ~/Documents/dotfiles
 
 swaymsg 'workspace --no-auto-back-and-forth "4:4 󰨞 "'
-~/.scripts/toolwait.py -w code-url-handler -- code ~/Documents/fmfi
+#
 
 swaymsg 'workspace --no-auto-back-and-forth "5:5 󰨞 "'
 #
