@@ -3,7 +3,7 @@
 * {
     font-family: "MonaspiceNe Nerd Font";
     font-size: 16px;
-    transition-duration: 0.1s;
+    transition-duration: 0s;
 }
 
 window#waybar {
@@ -13,6 +13,7 @@ window#waybar {
 }
 
 #workspaces button {
+    color: @my-text;
     background-color: @my-buttons;
     border: 1px solid @my-border;
     border-radius: 0;
@@ -29,8 +30,8 @@ window#waybar {
     color: @my-text-focused;
     background-color: #3465A4;
     border: 1px solid #729FCF;
-    box-shadow: inset 0 -3px @my-text-focused, 0 3px @my-text-focused;
-    border-bottom: transparent;
+    box-shadow: inset 0 -3px @my-text-focused;
+    border-bottom: 1px solid transparent;
 }
 
 #workspaces button.urgent {
@@ -41,12 +42,12 @@ window#waybar {
 
 #workspaces button.focused:hover {
     box-shadow: inset 0 -3px @my-text-focused;
-    border-bottom: transparent;
+    border-bottom: 1px solid transparent;
 }
 
 #workspaces button:hover {
     box-shadow: inset 0 -3px @my-text;
-    border-bottom: transparent;
+    border-bottom: 1px solid transparent;
 }
 
 #mode {
