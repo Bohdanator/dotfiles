@@ -35,6 +35,7 @@
     "editor.rulers": [100],
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.colors": true,
+    "workbench.editor.empty.hint": "hidden",
 
     // TERMINAL APPEARANCE
     "terminal.integrated.cursorStyle": "block",
@@ -187,13 +188,13 @@
     "projectManager.git.maxDepthRecursion": 1,
 
     // COPILOT
+    "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
         "yaml": true,
         "plaintext": true,
         "markdown": true,
     },
-    "workbench.editor.empty.hint": "hidden",
 
     // OTHER
 
