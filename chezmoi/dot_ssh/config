@@ -1,4 +1,7 @@
 AddKeysToAgent yes
 
+Host aur.archlinux.org
+  IdentityFile ~/.ssh/aur
+
 Host *
   ServerAliveInterval 60

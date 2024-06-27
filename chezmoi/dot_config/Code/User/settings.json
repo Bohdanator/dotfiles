@@ -36,6 +36,7 @@
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.colors": true,
     "workbench.editor.empty.hint": "hidden",
+    "workbench.startupEditor": "none",
 
     // TERMINAL APPEARANCE
     "terminal.integrated.cursorStyle": "block",
@@ -195,15 +196,6 @@
         "plaintext": true,
         "markdown": true,
     },
-<<<<<<< HEAD
-=======
-    "workbench.editor.empty.hint": "hidden",
-    "accessibility.signals.terminalBell": {
-        "sound": "on"
-    },
-    "terminal.integrated.enableVisualBell": true,
->>>>>>> 3cab181 (NVIDIA fixes, RAM usage raw, sway config changes)
-
     // OTHER
 
 
