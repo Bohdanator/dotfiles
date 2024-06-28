@@ -348,3 +348,4 @@ for_window [title="^Firefox — Sharing Indicator$"]          floating enable, k
 ################################### STARTUP ###################################
 
 exec --no-startup-id $HOME/.scripts/startup.sh
+exec_always autotiling
